@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --pops: "Poppins", sans-serif;
+    --nuns: "Nunito", sans-serif;
+    --monts: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: var(--pops);
+}
