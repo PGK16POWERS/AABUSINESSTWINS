@@ -21,4 +21,39 @@ button {
 
 body {
     font-family: var(--pops);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    border: 2px solid dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+#header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-link {
+    color: black;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+section {
+    width: 100vw;
+    padding: 2rem 3rem;
+    border: 2px solid dodgerblue;
+    min-height: 40vh;
 }
