@@ -131,7 +131,6 @@ section, footer {
 
 .top-half, .bottom-half {
     max-width: 1000px;
-    border: 2px solid black;
     width: 100%;
 }
 
@@ -452,27 +451,32 @@ footer .footer-modal {
         gap: 1rem;
     }
 
+    .sect-header-div {
+        padding: .2rem 2rem;
+    }
+    
+    .sect-header-title {
+        font-size: .8em;
+    }
+    
     .sect-modal {
-        height: 100%;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 2rem;
-        padding: 2rem;
-        border-radius: 16px;
+        padding: 2rem 1rem;
     }
     
     .white-modal {
-        border: 1px solid #f3f3f3;
-        background-image: url(assets/Landingpage/SQUAREBG.svg);
-        background-size: cover;
+        background-size: contain;
     }
-
-    .sect-header-div {
-        padding: .2rem 2rem;
-        box-shadow: 0 3px 8px 2px #a9a9a940;
-        max-width: auto;
+    
+    .sect-sub-head-para {
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+    
+    .sect-sub-para {
+        font-size: .9em;
+        font-weight: 400;
+        max-width: 450px;
     }
 
     /* LANDING PAGE */
@@ -493,23 +497,26 @@ footer .footer-modal {
 }
 
 .th-div-span {
-    font-size: .5em;
+    font-size: .7em;
     display: flex;
 }
 
 .head-para {
-    font-size: 1.8em;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
     line-height: 40px;
+    max-width: 450px;
+    width: 100%;
 }
 
 .sub-head-para {
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    line-height: 25px;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 20px;
+    max-width: 450px;
+    width: 100%;
 }
 
 /* LANBDING PAGE */
