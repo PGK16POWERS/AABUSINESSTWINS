@@ -634,18 +634,18 @@ footer .footer-modal {
     #call-to-action-one .sect-sub-head-para {
         max-width: 450px;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     #call-to-action-two .sect-sub-head-para {
         max-width: 450px;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     #cta-single {
-        max-width: 90%;
-        width: 90%;
+        max-width: 100%;
+        width: 100%;
     }
 
     #emailInp {
