@@ -48,7 +48,6 @@ body {
 section, footer {
     width: 100vw;
     padding: 2rem 3rem;
-    border: 2px solid dodgerblue;
     min-height: 40vh;
     display: flex;
     align-items: center;
@@ -380,14 +379,69 @@ section, footer {
 
 /* FOOTER */
 
+footer .footer-modal {
+    align-items: flex-start;
+}
+
 .footer-modal .brand-logo {
     width: 50px;
 }
 
 .footer-modal {
     border: 1px solid #f3f3f3;
+    gap: 1rem;
 }
 
+.footer-link-parent-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 5rem;
+}
+
+.flcd-header {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #1e1e1e;
+}
+
+.footer-link-child-div ul {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3rem;
+}
+
+.footer-link {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #1e1e1e;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: #EFEFEF;
+}
+
+.footer-modal .fade-title {
+    font-style: italic;
+}
+
+.ref-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ref-links .social-icon-parent .social-icon {
+    width: 25px;
+}
 
 
 /* FOOTER */
