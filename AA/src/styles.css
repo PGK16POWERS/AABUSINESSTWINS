@@ -496,6 +496,10 @@ footer .footer-modal {
         padding: 1rem;
     }
 
+    .brand-logo {
+        width: 50px;
+    }
+
     nav {
         display: none;
     }
