@@ -475,15 +475,15 @@ footer .footer-modal {
     
     .sect-sub-para {
         font-size: .9em;
-        font-weight: 400;
+        font-weight: 300;
         max-width: 450px;
     }
 
     /* LANDING PAGE */
 
 .top-half {
-    padding: 3rem 1rem;
-    gap: 1.5rem;
+    padding: 2rem .5rem;
+    gap: 1rem;
 }
 
 .th-div {
@@ -505,18 +505,16 @@ footer .footer-modal {
     font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 1px;
-    line-height: 40px;
+    line-height: 30px;
     max-width: 450px;
-    width: 100%;
 }
 
 .sub-head-para {
     font-size: .9em;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0px;
     line-height: 20px;
     max-width: 450px;
-    width: 100%;
 }
 
 /* LANBDING PAGE */
