@@ -192,7 +192,6 @@ section, footer {
 /* RESOURCES SECTION */
 
 .parent-div {
-    border: 2px solid #161616;
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -329,9 +328,18 @@ section, footer {
 
 /* CALL TO ACTION 2 */
 
-#call-to-action-two .sect-sub-head-para {
+#call-to-action-one .sect-sub-head-para {
+    max-width: 600px;
     font-weight: 500;
     font-size: 2em;
+    text-align: center;
+}
+
+#call-to-action-two .sect-sub-head-para {
+    max-width: 600px;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
 }
 
 #cta-single {
@@ -370,7 +378,6 @@ section, footer {
     border-radius: 100px;
     width: 150px;
 }
-
 
 /* CALL TO ACTION 2 */
 
@@ -533,46 +540,125 @@ footer .footer-modal {
 
     /* RESOURCES SECTION */
 
-.parent-div {
-    padding: 1rem .5rem;
-    gap: 2rem;
-}
+    .parent-div {
+        padding: 1rem .5rem;
+        gap: 2rem;
+    }
 
-.child-div {
-   max-width: 350px; 
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 1rem;
-   padding: 1rem;
-   border: 1px solid rgb(26, 23, 23);
-   border-radius: 10px;
-   background-color: white;
-}
+    .child-div {
+       max-width: 350px; 
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 1rem;
+       padding: 1rem;
+       border: 1px solid rgb(26, 23, 23);
+       border-radius: 10px;
+       background-color: white;
+    }
 
-.inner-image-div {
-    height: 150px;
-    width: 100%;
-    border: 1px solid rgb(48, 39, 38);
-    border-radius: 5px;
-}
+    .inner-image-div {
+        height: 150px;
+        width: 100%;
+        border: 1px solid rgb(48, 39, 38);
+        border-radius: 5px;
+    }
 
-.content-div {
-    gap: .3rem;
-}
+    .content-div {
+        gap: .3rem;
+    }
 
-.div-header-title {
-    font-size: 1em;
-    letter-spacing: 1px;
-}
+    .div-header-title {
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
 
-.div-para {
-    font-size: .8em;
-    font-weight: 300;
-}
+    .div-para {
+        font-size: .8em;
+        font-weight: 300;
+    }
 
-/* RESOURCE SECTION */
+    /* RESOURCE SECTION */
+
+    /* NETWORKING AND OPPORTUNITIES */
+
+    .networking-child {
+        height: 100%;
+    }
+
+    .networking-child .inner-image-div {
+        height: 200px;
+    }
+
+    .redirect-button {
+        height: 40px;
+        width: 70px;
+        border-radius: 3px;
+    }
+
+    .networking-child .content-div {
+        gap: .5rem;
+    }
+
+    /* NETWORKING AND OPPORTUNITIES */
+
+    /* FOUNDERS AND ASSOCIATES SECTION */
+
+    .fade-title {
+        font-weight: 400;
+    }
+
+    .social-icon {
+        height: 25px;
+        cursor: pointer;
+        transition-duration: .3s;
+    }
+
+    .social-icon:hover,
+    .social-icon:active {
+        transform: scale(110%);
+    }
+
+    .social-icon-parent {
+        display: flex;
+        justify-content: flex-start;
+        gap: .6rem;
+        margin-top: .5rem;
+    }
+
+    /* FOUNDERS AND ASSOCIATES SECTION */
+
+    /* CALL TO ACTION 2 */
+
+    #call-to-action-one .sect-sub-head-para {
+        max-width: 450px;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+
+    #call-to-action-two .sect-sub-head-para {
+        max-width: 450px;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+
+    #cta-single {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    #emailInp {
+        height: 100%;
+        border: 0 solid transparent;
+        border-radius: 100px;
+        padding: 0.6rem 1rem;
+        font-size: 1em;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+
+    /* CALL TO ACTION 2 */
 
     /* FOOTER */
 
