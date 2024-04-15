@@ -40,9 +40,12 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 section, footer {
+    align-self: center;
     width: 100%;
     padding: 2rem 3rem;
     min-height: 40vh;
@@ -102,7 +105,6 @@ section, footer {
 /* HEADER SECTION */
 
 #header {
-    border: 2px solid dodgerblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -298,7 +300,6 @@ section, footer {
     margin-top: .5rem;
 }
 
-
 /* FOUNDERS AND ASSOCIATES SECTION */
 
 /* FAQ SECTION */
@@ -477,7 +478,7 @@ footer .footer-modal {
     /* LANDING PAGE */
 
 .top-half {
-    padding: 3rem .5rem;
+    padding: 3rem 1rem;
     gap: 1.5rem;
 }
 
@@ -511,6 +512,18 @@ footer .footer-modal {
 }
 
 /* LANBDING PAGE */
+
+/* HEADER SECTION */
+
+#header {
+    padding: 1rem;
+}
+
+nav {
+    display: none;
+}
+
+/* HEADER SECTION */
 
     /* FOOTER */
 
