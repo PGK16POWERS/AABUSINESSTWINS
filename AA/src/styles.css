@@ -301,8 +301,8 @@ section, footer {
 /* FOUNDERS AND ASSOCIATES SECTION */
 
 /* FAQ SECTION */
+
 #faq .parent-div {
-    border: 2px solid #161616;
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -322,6 +322,10 @@ section, footer {
    padding: 1rem 3rem;
    border: 1px solid rgb(26, 23, 23);
    border-radius: 100px;
+}
+
+.faq-ans {
+    display: none;
 }
 
 /* FAQ SECTION */
@@ -628,6 +632,32 @@ footer .footer-modal {
     }
 
     /* FOUNDERS AND ASSOCIATES SECTION */
+
+    /* FAQ SECTION */
+
+    #faq .parent-div {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    #faq .child-div {
+       max-width: 100%; 
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 1rem;
+       padding: 1rem 3rem;
+       border: 1px solid rgb(26, 23, 23);
+       border-radius: 100px;
+    }
+
+    /* FAQ SECTION */
 
     /* CALL TO ACTION 2 */
 
