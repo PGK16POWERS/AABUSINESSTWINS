@@ -461,7 +461,7 @@ footer .footer-modal {
     
     .sect-modal {
         gap: 2rem;
-        padding: 2rem 1rem;
+        padding: 2rem 0rem;
     }
     
     .white-modal {
