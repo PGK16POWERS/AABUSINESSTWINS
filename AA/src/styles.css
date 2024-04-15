@@ -24,6 +24,11 @@ button {
     background-color: black;
 }
 
+.semi-btn {
+    background-color: #e7ecf082;
+    border: 1px solid #E7ECF0;
+}
+
 :root {
     --pops: "Poppins", sans-serif;
     --nuns: "Nunito", sans-serif;
@@ -49,6 +54,14 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+}
+
+.sect-header-div {
+    background-color: white;
+    padding: .5rem 3rem;
+    border: 0 solid transparent;
+    border-radius: 100px;
+    color: black;
 }
 
 /* HEADER SECTION */
