@@ -189,7 +189,6 @@ section, footer {
     line-height: 30px;
 }
 
-
 /* LANBDING PAGE */
 
 /* RESOURCES SECTION */
@@ -477,6 +476,44 @@ footer .footer-modal {
         box-shadow: 0 3px 8px 2px #a9a9a940;
         max-width: auto;
     }
+
+    /* LANDING PAGE */
+
+.top-half {
+    padding: 3rem .5rem;
+    gap: 1.5rem;
+}
+
+.th-div {
+    padding: 0.3rem 1rem;
+    gap: 0.5rem;
+}
+
+.blue-ball {
+    height: 16px;
+    width: 16px;
+}
+
+.th-div-span {
+    font-size: .6em;
+}
+
+.head-para {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+}
+
+.sub-head-para {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* LANBDING PAGE */
 
     /* FOOTER */
 
