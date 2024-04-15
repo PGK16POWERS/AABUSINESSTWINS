@@ -447,7 +447,7 @@ footer .footer-modal {
 
     section, footer {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1rem;
         min-height: 0;
         gap: 1rem;
     }
@@ -493,7 +493,8 @@ footer .footer-modal {
 }
 
 .th-div-span {
-    font-size: .6em;
+    font-size: .5em;
+    display: flex;
 }
 
 .head-para {
