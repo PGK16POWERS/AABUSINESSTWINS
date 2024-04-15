@@ -456,7 +456,7 @@ footer .footer-modal {
     }
     
     .sect-header-title {
-        font-size: .8em;
+        font-size: .7em;
     }
     
     .sect-modal {
@@ -483,7 +483,7 @@ footer .footer-modal {
 
 .top-half {
     padding: 2rem .5rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .th-div {
