@@ -60,20 +60,6 @@ section, footer {
     gap: 1rem;
 }
 
-.sect-header-div {
-    background-color: white;
-    padding: .2rem 3rem;
-    border: 0 solid transparent;
-    border-radius: 100px;
-    color: black;
-    box-shadow: 0 3px 8px 2px #a9a9a940;
-    max-width: auto;
-}
-
-.sect-header-title {
-    font-size: .9em;
-}
-
 .sect-modal {
     border: 1px solid #f3f3f3;
     height: 100%;
@@ -115,6 +101,29 @@ section, footer {
 .child-div {
     background-color: white;
 }
+
+/* SECTION HEADER AND DIV */
+
+.sect-header-div {
+    background-color: white;
+    padding: .5rem 3rem;
+    border: 0 solid transparent;
+    border-radius: 100px;
+    color: black;
+    box-shadow: 0 3px 8px 2px #a9a9a940;
+    max-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sect-header-title {
+    font-size: .9em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* SECTION HEADER AND DIV */
 
 /* HEADER SECTION */
 
@@ -214,21 +223,8 @@ section, footer {
 
 #resources .sect-header-div {
     background-color: #0660a12f;
-    padding: .5rem 3rem;
-    border: 0 solid transparent;
-    border-radius: 100px;
     color: white;
     box-shadow: 0px 0px #a9a9a900;
-    max-width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#resources .sect-header-title {
-    font-size: .9em;
-    font-weight: 400;
-    letter-spacing: 1px;
 }
 
 .parent-div {
@@ -415,8 +411,6 @@ section, footer {
     background-position: center center;
     background-repeat: no-repeat;
 }
-
-
 
 /* PROJECT SECTION */
 
@@ -624,11 +618,11 @@ footer .footer-modal {
     }
 
     .sect-header-div {
-        padding: .2rem 2rem;
+        padding: .3rem 2rem;
     }
     
     .sect-header-title {
-        font-size: .7em;
+        font-size: .8em;
     }
     
     .sect-modal {
