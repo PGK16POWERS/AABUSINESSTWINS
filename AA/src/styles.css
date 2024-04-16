@@ -17,16 +17,21 @@ button {
     padding: .6rem 2rem;
     border: 0 solid transparent;
     border-radius: 5px;
-    font-size: .9em;
+    font-size: 1em;
+    font-weight: 300;
     letter-spacing: 1px;
-    font-weight: 400;
     color: white;
-    background-color: black;
+    background-color: #063f6b64;
+    border: 1px solid #063f6b;
 }
 
 .semi-btn {
-    background-color: #e7ecf082;
-    border: 1px solid #E7ECF0;
+    background-color: #063f6b64;
+    border: 1px solid #063f6b;
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 :root {
@@ -254,9 +259,9 @@ section, footer {
 }
 
 .redirect-button {
-    background-color: #161616;
-    height: 50px;
-    width: 90px;
+    background-color: #042339;
+    height: 40px;
+    width: 80px;
     border: 0 solid transparent;
     border-radius: 5px;
     margin-top: 1rem;
@@ -457,7 +462,7 @@ footer .footer-modal {
 
     section, footer {
         width: 100%;
-        padding: 1rem;
+        padding: 2rem 1rem;
         min-height: 0;
         gap: 1rem;
     }
@@ -509,8 +514,8 @@ footer .footer-modal {
     /* LANDING PAGE */
 
     .top-half {
-        padding: 2rem .5rem;
-        gap: 1.5rem;
+        padding: 3rem .5rem;
+        gap: 1.8rem;
     }
 
     .th-div {
@@ -664,8 +669,6 @@ footer .footer-modal {
     #faq .child-div .content-div .div-header-title {
         font-size: .8em;
     }
-
-
 
     /* FAQ SECTION */
 
