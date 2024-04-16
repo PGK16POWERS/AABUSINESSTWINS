@@ -78,13 +78,6 @@ section, footer {
     background-size: contain;
 }
 
-.sect-sub-head-para {
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
 .sect-sub-para {
     font-size: 1.2em;
     font-weight: 300;
@@ -102,6 +95,12 @@ section, footer {
     background-color: white;
 }
 
+
+
+
+
+
+
 /* SECTION HEADER AND DIV */
 
 .sect-header-div {
@@ -110,7 +109,7 @@ section, footer {
     border: 0 solid transparent;
     border-radius: 100px;
     color: black;
-    box-shadow: 0 3px 8px 2px #a9a9a940;
+    box-shadow: 0 3px 8px 1px #a9a9a940;
     max-width: auto;
     display: flex;
     align-items: center;
@@ -124,6 +123,57 @@ section, footer {
 }
 
 /* SECTION HEADER AND DIV */
+
+
+
+
+
+
+/* MODULE HEADER */
+
+.sect-sub-head-para {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* MODULE HEADER */
+
+
+
+
+/* PARENT DIV AND CHILD */
+
+.parent-div {
+    width: 100%;
+    max-width: calc((100% - 2rem) * 2); /* Adjusted calculation */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.child-div {
+    flex: 1 0 calc(50% - 1rem); /* Adjusted width calculation */
+    max-width: calc(350px - 1rem); /* Ensure children don't exceed 50% width */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 17.5px 1px #c9c9c956;
+}
+
+/* PARENT DIV AND CHILD */
+
+
+
+
 
 /* HEADER SECTION */
 
@@ -149,6 +199,12 @@ section, footer {
 }
 
 /* HEADER SECTION */
+
+
+
+
+
+
 
 /* LANDING PAGE */
 
@@ -227,27 +283,6 @@ section, footer {
     box-shadow: 0px 0px #a9a9a900;
 }
 
-.parent-div {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-#resources .child-div {
-    max-width: 350px; 
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #03030338;
-}
-
 .inner-image-div {
     height: 100px;
     width: 100%;
@@ -318,12 +353,6 @@ section, footer {
 /* RESOURCE SECTION */
 
 /* NETWORKING AND OPPORTUNITIES */
-.networking-child {
-    max-width: 350px; 
-    width: 100%;
-    height: 350px;
-    box-shadow: 0 1px 17.5px 3px #bfbfbf56;
-}
 
 .networking-child .inner-image-div {
     height: 100%;
@@ -635,8 +664,8 @@ footer .footer-modal {
     }
     
     .sect-sub-head-para {
-        font-size: 1.3em;
-        font-weight: 500;
+        font-size: 1.4em;
+        font-weight: 600;
     }
     
     .sect-sub-para {
@@ -644,6 +673,26 @@ footer .footer-modal {
         font-weight: 300;
         max-width: 450px;
     }
+
+
+    /* PARENT DIV AND CHILD */
+
+    .parent-div {
+        width: 100%;
+        max-width: calc((100% - 1rem) * 1); /* Adjusted calculation */
+        padding: 1rem .5rem;
+        gap: 1rem;
+    }
+
+    .child-div {
+        flex: 1 0 calc(100% - 1rem); /* Adjusted width calculation */
+        max-width: calc(380px - 1rem); /* Ensure children don't exceed 50% width */
+        height: 100%;
+    }
+
+    /* PARENT DIV AND CHILD */
+
+
 
     /* HEADER SECTION */
 
@@ -660,6 +709,8 @@ footer .footer-modal {
     }
 
     /* HEADER SECTION */
+
+
 
     /* LANDING PAGE */
 
@@ -703,22 +754,6 @@ footer .footer-modal {
 
     /* RESOURCES SECTION */
 
-    .parent-div {
-        padding: 1rem .5rem;
-        gap: 2rem;
-    }
-
-    .child-div {
-       max-width: 350px; 
-       height: 100%;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       gap: 1rem;
-       padding: 1rem;
-       border-radius: 10px;
-    }
-
     .inner-image-div {
         height: 150px;
         width: 100%;
@@ -742,10 +777,6 @@ footer .footer-modal {
     /* RESOURCE SECTION */
 
     /* NETWORKING AND OPPORTUNITIES */
-
-    .networking-child {
-        height: 100%;
-    }
 
     .networking-child .inner-image-div {
         height: 200px;
