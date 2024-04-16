@@ -107,6 +107,11 @@ section, footer {
     max-width: 700px;
 }
 
+#arrow {
+    color: white;
+    font-size: 30px;
+}
+
 /* HEADER SECTION */
 
 #header {
@@ -248,11 +253,11 @@ section, footer {
 .networking-child {
     max-width: 350px; 
     width: 100%;
-    height: 300px;
+    height: 350px;
 }
 
 .networking-child .inner-image-div {
-    height: 230px;
+    height: 100%;
     width: 100%;
     border: 1px solid rgb(48, 39, 38);
     border-radius: 5px;
@@ -266,6 +271,9 @@ section, footer {
     border-radius: 5px;
     margin-top: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .networking-child .content-div {
@@ -274,6 +282,7 @@ section, footer {
     justify-content: space-between;
     align-items: flex-start;
     gap: .1rem;
+    height: auto;
 }
 
 /* NETWORKING AND OPPORTUNITIES */
