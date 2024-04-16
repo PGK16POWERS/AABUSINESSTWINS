@@ -285,7 +285,68 @@ section, footer {
     height: auto;
 }
 
+.parent-div .no-child:nth-child(1) .inner-image-div {
+    background-image: url(assets/Landingpage/STARTUP.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.parent-div .no-child:nth-child(2) .inner-image-div {
+    background-image: url(assets/Landingpage/WORKSHOP.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.parent-div .no-child:nth-child(3) .inner-image-div {
+    background-image: url(assets/Landingpage/NETWORKING.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.parent-div .no-child:nth-child(4) .inner-image-div {
+    background-image: url(assets/Landingpage/INNOSUMMIT.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 /* NETWORKING AND OPPORTUNITIES */
+
+/* PROJECT SECTION */
+.parent-div .project-child .inner-image-div {
+    background-image: url(assets/Landingpage/AAbt.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.parent-div .project-child:nth-child(2) .inner-image-div {
+    background-image: url(assets/Landingpage/respremium.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.parent-div .project-child:nth-child(3) .inner-image-div {
+    background-image: url(assets/Landingpage/telltheworld.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.parent-div .project-child:nth-child(4) .inner-image-div {
+    background-image: url(assets/Landingpage/AAbt.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+/* PROJECT SECTION */
 
 /* FOUNDERS AND ASSOCIATES SECTION */
 .fade-title {
@@ -310,6 +371,20 @@ section, footer {
     justify-content: flex-start;
     gap: .4rem;
     margin-top: .5rem;
+}
+
+.fna-child:first-child .inner-image-div {
+    background-image: url(assets/Landingpage/aaTWINs.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.parent-div .fna-child:nth-child(2) .inner-image-div {
+    background-image: url(assets/Landingpage/black.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 /* FOUNDERS AND ASSOCIATES SECTION */
