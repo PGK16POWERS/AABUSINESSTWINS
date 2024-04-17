@@ -63,11 +63,11 @@ section, footer {
 .sect-modal {
     border: 1px solid #f3f3f3;
     height: 100%;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem;
     border-radius: 16px;
 }
@@ -76,14 +76,6 @@ section, footer {
     border: 1px solid #f3f3f3;
     background-image: url(assets/Landingpage/SQUAREBG.svg);
     background-size: contain;
-}
-
-.sect-sub-para {
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-align: center;
-    max-width: 700px;
 }
 
 #arrow {
@@ -133,9 +125,18 @@ section, footer {
 
 .sect-sub-head-para {
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 600;
+    max-width: 600px;
     letter-spacing: 1px;
     text-align: center;
+}
+
+.sect-sub-para {
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    max-width: 600px;
 }
 
 /* MODULE HEADER */
@@ -281,6 +282,11 @@ section, footer {
     background-color: #0660a12f;
     color: white;
     box-shadow: 0px 0px #a9a9a900;
+}
+
+#resources .child-div {
+    background-color: rgba(3,3,3,0.2);
+    box-shadow: none;
 }
 
 .inner-image-div {
@@ -516,20 +522,6 @@ section, footer {
 
 /* CALL TO ACTION 2 */
 
-#call-to-action-one .sect-sub-head-para {
-    max-width: 600px;
-    font-weight: 500;
-    font-size: 2em;
-    text-align: center;
-}
-
-#call-to-action-two .sect-sub-head-para {
-    max-width: 600px;
-    font-weight: 500;
-    font-size: 2em;
-    text-align: center;
-}
-
 #cta-single {
     background-color: #000000;
     padding: .5rem;
@@ -663,16 +655,25 @@ footer .footer-modal {
         background-size: contain;
     }
     
+    /* MODULE HEADER */
+
     .sect-sub-head-para {
         font-size: 1.4em;
-        font-weight: 600;
+        font-weight: 500;
+        max-width: 390px;
+        letter-spacing: 1px;
+        text-align: center;
     }
-    
+
     .sect-sub-para {
         font-size: .9em;
         font-weight: 300;
-        max-width: 450px;
+        letter-spacing: 1px;
+        text-align: center;
+        max-width: 380px;
     }
+
+    /* MODULE HEADER */
 
 
     /* PARENT DIV AND CHILD */
