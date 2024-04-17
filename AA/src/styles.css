@@ -207,7 +207,17 @@ section, footer {
 
 
 
+/* MISSION AND PURPOSE */
 
+#mission-and-purpose .sect-sub-para {
+    color: #042339;
+}
+
+
+
+
+
+/* MISSION AND PURPOSE */
 
 
 
@@ -560,14 +570,14 @@ section, footer {
 /* CALL TO ACTION */
 
 #cta-single {
-    background-color: #000000;
+    background-color: #063f68;
     padding: .5rem;
     border: 0 solid transparent;
     border-radius: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     gap: .5rem;
 }
@@ -580,7 +590,7 @@ section, footer {
     font-size: 1em;
     letter-spacing: 1px;
     color: white;
-    background-color: #000000;
+    background-color: #063f68;
     width: 100%;
 }
 
@@ -591,7 +601,7 @@ section, footer {
 }
 
 .cta-sub-btn {
-    background-color: #161616;
+    background-color: #042339;
     border-radius: 100px;
     width: 150px;
 }
@@ -921,6 +931,12 @@ footer .footer-modal {
         font-size: 1em;
         letter-spacing: 1px;
         width: 100%;
+        gap: .2rem;
+    }
+
+    .cta-sub-btn {
+        background-color: #042339;
+        width: auto;
     }
 
     /* CALL TO ACTION 2 */
