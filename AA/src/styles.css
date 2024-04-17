@@ -30,7 +30,7 @@ button {
     border: 1px solid #063f6b;
     color: white;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -113,6 +113,7 @@ section, footer {
     font-size: .9em;
     font-weight: 400;
     letter-spacing: 1px;
+    color: #042339;
 }
 
 /* SECTION HEADER AND DIV */
@@ -130,6 +131,7 @@ section, footer {
     max-width: 600px;
     letter-spacing: 1px;
     text-align: center;
+    color: #042339;
 }
 
 .sect-sub-para {
@@ -138,6 +140,7 @@ section, footer {
     letter-spacing: 1px;
     text-align: center;
     max-width: 600px;
+    color: #042339;
 }
 
 /* MODULE HEADER */
@@ -281,8 +284,11 @@ section, footer {
 
 #resources .sect-header-div {
     background-color: #0660a12f;
-    color: white;
     box-shadow: 0px 0px #a9a9a900;
+}
+
+#resources .sect-header-title {
+    color: white;
 }
 
 #resources .child-div {
@@ -515,6 +521,10 @@ section, footer {
    border-radius: 100px;
 }
 
+#faq .sect-header-title {
+    color: white;
+}
+
 .faq-ans {
     display: none;
 }
@@ -535,6 +545,14 @@ section, footer {
     background-color: #063f686b;
     border: 1px solid #063f68;
     box-shadow: none;
+}
+
+#faq .child-div .content-div .div-header-title {
+    font-weight: 300;
+}
+
+#faq .child-div .content-div .div-header-title, .faq-ans {
+    color: white;
 }
 
 /* FAQ SECTION */
