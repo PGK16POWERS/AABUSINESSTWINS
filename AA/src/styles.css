@@ -204,8 +204,8 @@ section, footer {
 }
 
 .header-link {
-    color: black;
-    font-size: 1.1em;
+    color: #042339;
+    font-size: .9em;
     letter-spacing: 1px;
     font-weight: 400;
 }
@@ -213,7 +213,7 @@ section, footer {
 .burger-menu {
     width: 40px;
     height: 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 18px;
@@ -238,6 +238,11 @@ section, footer {
     transform: rotate(-45deg) translate(4px, -4px);
 }
   
+.header-btn {
+    background-color: #063f68;
+    color: white;
+    border: 0 solid transparent;
+}
 
 /* HEADER SECTION */
 
