@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LandingpageComponent implements OnInit {
 
   ngOnInit() {
-    function toggleMenu() {
+
       const menu = document.querySelector('.burger-menu') as HTMLElement;
-      menu.classList.toggle('open');
-    }    
+
+      menu.addEventListener("click", () => {
+        menu.classList.toggle('open');
+      })
+      
   }
 
 }
