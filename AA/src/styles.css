@@ -70,6 +70,7 @@ section, footer {
     gap: 1.5rem;
     padding: 2rem;
     border-radius: 16px;
+    max-width: 900px;
 }
 
 .white-modal {
@@ -518,9 +519,27 @@ section, footer {
     display: none;
 }
 
+#faq .sect-modal {
+    background-image: url(assets/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#faq .sect-header-div {
+    background-color: #0660a12f;
+    color: white;
+    box-shadow: 0px 0px #a9a9a900;
+}
+
+#faq .child-div {
+    background-color: #063f686b;
+    border: 1px solid #063f68;
+    box-shadow: none;
+}
+
 /* FAQ SECTION */
 
-/* CALL TO ACTION 2 */
+/* CALL TO ACTION */
 
 #cta-single {
     background-color: #000000;
@@ -559,7 +578,20 @@ section, footer {
     width: 150px;
 }
 
-/* CALL TO ACTION 2 */
+#call-to-action-one .sect-modal {
+    background-image: url(assets/5.jpg);
+    background-size: cover;
+}
+
+#call-to-action-one .sect-modal {
+    border: 0 solid transparent
+}
+
+#call-to-action-one .sect-sub-head-para ,.sect-sub-para {
+    color:white
+}
+
+/* CALL TO ACTION */
 
 /* FOOTER */
 
@@ -633,7 +665,7 @@ footer .footer-modal {
 
     section, footer {
         width: 100%;
-        padding: 2rem 1rem;
+        padding: 1rem;
         min-height: 0;
         gap: 1rem;
     }
@@ -825,7 +857,7 @@ footer .footer-modal {
 
     #faq .parent-div {
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -840,7 +872,7 @@ footer .footer-modal {
        flex-direction: column;
        align-items: flex-start;
        gap: 1rem;
-       padding: 1rem;
+       padding: 0.5rem;
        border-radius: 3px;
     }
 
@@ -852,13 +884,7 @@ footer .footer-modal {
 
     /* CALL TO ACTION 2 */
 
-    #call-to-action-one .sect-sub-head-para {
-        max-width: 450px;
-        font-weight: 600;
-        font-size: 1.3em;
-    }
-
-    #call-to-action-two .sect-sub-head-para {
+    #call-to-action-one .sect-sub-head-para, #call-to-action-two .sect-sub-head-para {
         max-width: 450px;
         font-weight: 600;
         font-size: 1.3em;
