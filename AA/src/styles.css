@@ -290,15 +290,17 @@ section, footer {
 }
 
 .bottom-half {
-    border: 2px solid salmon;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 500px;
 }
 
-#videoFrame {
+iframe {
     width: 100%;
     height: 100%;
+    border: 0 solid transparent;
+    border-radius: 5px;
 }
 
 /* LANBDING PAGE */
@@ -829,6 +831,20 @@ footer .footer-modal {
         letter-spacing: 0px;
         line-height: 20px;
         max-width: 450px;
+    }
+
+    .bottom-half {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: 0 solid transparent;
+        border-radius: 5px;
     }
 
     /* LANDING PAGE */
