@@ -223,6 +223,12 @@ section, footer {
 
 /* LANDING PAGE */
 
+#landing-page {
+    background-image: url(assets/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .top-half, .bottom-half {
     max-width: 1000px;
     width: 100%;
@@ -271,6 +277,7 @@ section, footer {
     letter-spacing: 1px;
     text-align: center;
     line-height: 75px;
+    color: white;
 }
 
 .sub-head-para {
@@ -279,6 +286,7 @@ section, footer {
     letter-spacing: 1px;
     text-align: center;
     line-height: 30px;
+    color: white;
 }
 
 /* LANBDING PAGE */
