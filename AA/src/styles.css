@@ -289,6 +289,18 @@ section, footer {
     color: white;
 }
 
+.bottom-half {
+    border: 2px solid salmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#videoFrame {
+    width: 100%;
+    height: 100%;
+}
+
 /* LANBDING PAGE */
 
 /* RESOURCES SECTION */
