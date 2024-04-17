@@ -183,10 +183,17 @@ section, footer {
 /* HEADER SECTION */
 
 #header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    background-color: #ffffff;
+    backdrop-filter: blur(30%);
+    z-index: 999;
 }
 
 #header nav ul {
@@ -203,27 +210,31 @@ section, footer {
     font-weight: 400;
 }
 
-#menu .burger-menu {
+.burger-menu {
     width: 40px;
     height: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 18px;
     cursor: pointer;
 }
   
-.line {
+.nav-line {
     width: 100%;
     height: 4px;
     background-color: #333;
+    border: 0 solid transparent;
+    border-radius: 0;
     transition: all 0.3s ease;
+    background-color: #57b1f1;
 }
   
-.burger-menu.open .line:nth-child(1) {
+.burger-menu.open .nav-line:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
 }
   
-.burger-menu.open .line:nth-child(2) {
+.burger-menu.open .nav-line:nth-child(2) {
     transform: rotate(-45deg) translate(4px, -4px);
 }
   
@@ -805,7 +816,7 @@ footer .footer-modal {
     /* HEADER SECTION */
 
     #header {
-        padding: 1rem;
+        padding: 1rem 2rem;
     }
 
     .brand-logo {
@@ -818,6 +829,26 @@ footer .footer-modal {
 
     .header-btn {
         display: none
+    }
+
+    .burger-menu {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        cursor: pointer;
+    }
+      
+    .nav-line {
+        width: 100%;
+        height: 4px;
+        background-color: #333;
+        border: 0 solid transparent;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        background-color: #57b1f1;
     }
 
     /* HEADER SECTION */
