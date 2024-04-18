@@ -245,6 +245,20 @@ section, footer {
     border: 0 solid transparent;
 }
 
+#floating-menu {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    top: 92px;
+    width: 100%;
+    z-index: 999;
+}
+
 /* HEADER SECTION */
 
 
@@ -837,12 +851,23 @@ footer .footer-modal {
         width: 50px;
     }
 
-    nav {
+    .header-nav {
         display: none;
     }
 
     .header-btn {
         display: none
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .floating-nav-btn {
+        display: flex;
     }
 
     .burger-menu {
@@ -863,6 +888,13 @@ footer .footer-modal {
         transition: all 0.3s ease;
         background-color: #0d80d2;
         z-index: 99;
+    }
+
+    .header-link {
+        color: #042339;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        font-weight: 400;
     }
 
     /* HEADER SECTION */
