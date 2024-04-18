@@ -47,6 +47,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 section, footer {
@@ -246,17 +247,24 @@ section, footer {
 }
 
 #floating-menu {
-    position: sticky;
-    display: flex;
+    position:sticky;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
     background-color: white;
     padding: 2rem;
-    top: 92px;
     width: 100%;
-    z-index: 999;
+    height: 100%;
+    z-index: 998;
+    border: 0 solid transparent;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 6px 8px 0 rgba(44, 44, 44, 0.205);
+}
+
+.flexed {
+    display: flex;
 }
 
 /* HEADER SECTION */
