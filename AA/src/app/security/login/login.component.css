@@ -5,14 +5,26 @@
 
 .login-parent-div {
     justify-content: center;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:  
-    "a"
-    "b";
+    display: flex;
+    flex-direction: column;
+    width: 500px;
     gap: 1rem;
 }
+
+.inp-field {
+    padding: 5px 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #161616;
+    font-weight: 400;
+    width: 100%;
+}
+
+.field-inp-div {
+    width: 100%;
+}
+
 
 .field-input-parent .field-inp-div:first-child {
     grid-area: a;

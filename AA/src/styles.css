@@ -845,6 +845,7 @@ footer .footer-modal {
 .field-input-parent {
     justify-content: center;
     display: grid;
+    width: 500px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:  
