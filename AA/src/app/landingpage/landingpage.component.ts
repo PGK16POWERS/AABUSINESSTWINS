@@ -12,6 +12,7 @@ export class LandingpageComponent implements OnInit {
       const menu = document.querySelector('.burger-menu') as HTMLElement;
       const header = document.querySelector("#header") as HTMLElement;
       const floatingNav = document.querySelector("#floating-menu") as HTMLElement;
+      const headerBtn = document.querySelector(".header-btn") as HTMLElement;
       const faqChildDiv = document.querySelectorAll(".child-div") as NodeListOf<HTMLElement>;
 
       var headerHeight = header.offsetHeight;
@@ -49,6 +50,10 @@ export class LandingpageComponent implements OnInit {
         });
 
       });
+
+      headerBtn.addEventListener("click", () => {
+        window.location.href = "/security"
+      })
       
   }
 

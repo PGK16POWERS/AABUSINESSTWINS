@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { SecurityComponent } from './security/security.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
+import { LoginComponent } from './security/login/login.component';
+import { RegisterComponent } from './security/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     SecurityComponent,
-    UserInterfaceComponent
+    UserInterfaceComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
