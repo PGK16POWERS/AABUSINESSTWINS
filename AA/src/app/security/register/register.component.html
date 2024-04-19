@@ -1,1 +1,39 @@
-<p>register works!</p>
+<section id="security-section">
+    <form action="/register-account" method="post" id="security-form">
+
+        <span class="sect-sub-head-para">
+            Create a new account with AA business Twins
+        </span>
+
+        <div class="field-input-parent">
+            <div class="field-inp-div">
+                <input type="text" class="inp-field" name="name" id="nameInp" required placeholder="Name" autocomplete="name">
+            </div>
+            <div class="field-inp-div">
+                <input type="text" class="inp-field" name="" id="" required placeholder="Last Name" autocomplete="family-name">
+            </div>
+            <div class="field-inp-div">
+                <input type="email" class="inp-field" name="emailInp" id="" required email placeholder="Email" autocomplete="email">
+            </div>
+            <div class="field-inp-div">
+                <input type="text" class="inp-field" name="" id="" required placeholder="Create Username">
+            </div>
+            <div class="field-inp-div">
+                <input type="password" password class="inp-field" name="" id="" required placeholder="Password">
+            </div>
+            <div class="field-inp-div">
+                <input type="password" class="inp-field" name="" id="" required placeholder="Confirm Password">
+            </div>
+            <div class="field-inp-div">
+                <input type="text" class="inp-field" name="" id="" required placeholder="LinkedIn (Optional)">
+            </div>
+        </div>
+        
+        <button type="button" class="def-btn form-btn sub-btn" id="create-btn">Create Account</button>
+
+        <a href="/security/login" class="redi-link">Already a member?</a>
+   
+    </form>
+    
+    <img src="assets/securitypage/securitypage.svg" class="sec-bg-pic">
+</section>
