@@ -1,0 +1,18 @@
+.login-parent-div {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:  
+    "a"
+    "b";
+    gap: 1rem;
+}
+
+.field-input-parent .field-inp-div:first-child {
+    grid-area: a;
+}
+
+.field-input-parent .field-inp-div:nth-child(2) {
+    grid-area: b;
+}

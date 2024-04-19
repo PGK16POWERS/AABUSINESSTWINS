@@ -783,6 +783,119 @@ footer .footer-modal {
 
 /* FOOTER */
 
+/* SECURITY PAGES */
+
+
+
+
+
+
+#security-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.redirect-btn-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.form-btn {
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    width: 350px;
+    font-weight: 400;
+}
+
+.field-inp-div {
+    width: 100%;
+}
+
+.inp-field {
+    padding: 5px 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #161616;
+    font-weight: 400;
+    width: 100%;
+}
+
+.inp-field:focus,
+.inp-field:active,
+.inp-field:hover {
+    outline: 0 solid transparent;
+}
+
+#security-form {
+    width: 100%;
+    border: 2 px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.field-input-parent {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:  
+    "a b"
+    "c c"
+    "d d"
+    "e e"
+    "f f"
+    "g g";
+    gap: 1rem;
+}
+
+.field-input-parent .field-inp-div:first-child {
+    grid-area: a;
+}
+
+.field-input-parent .field-inp-div:nth-child(2) {
+    grid-area: b;
+}
+
+.field-input-parent .field-inp-div:nth-child(3) {
+    grid-area: c;
+}
+
+.field-input-parent .field-inp-div:nth-child(4) {
+    grid-area: d;
+}
+
+.field-input-parent .field-inp-div:nth-child(5) {
+    grid-area: e;
+}
+
+.field-input-parent .field-inp-div:nth-child(6) {
+    grid-area: f;
+}
+
+.field-input-parent .field-inp-div:nth-child(7) {
+    grid-area: g;
+}
+
+.redi-link {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: black;
+}
+
+
+
+/* SECURITY PAGES */
+
 @media (max-width:1000px) {
 
     section, footer {
