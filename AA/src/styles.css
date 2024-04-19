@@ -786,14 +786,8 @@ footer .footer-modal {
 /* SECURITY PAGES */
 
 
-
-
-
-
 #security-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .redirect-btn-div {
@@ -1282,4 +1276,26 @@ footer .footer-modal {
     }
 
     /* FOOTER */
+
+    /* SECURITY PAGES */
+
+    .field-input-parent {
+        justify-content: flex-start;
+        display: grid;
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:  
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g";
+        gap: 1.5rem;
+    }
+
 }
