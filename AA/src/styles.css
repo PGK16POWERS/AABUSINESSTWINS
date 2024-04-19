@@ -839,13 +839,14 @@ footer .footer-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .field-input-parent {
     justify-content: center;
     display: grid;
     width: 500px;
+    height: 100%;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:  
@@ -855,7 +856,7 @@ footer .footer-modal {
     "e e"
     "f f"
     "g g";
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .field-input-parent .field-inp-div:first-child {
@@ -891,6 +892,15 @@ footer .footer-modal {
     letter-spacing: 1px;
     font-weight: 400;
     color: black;
+}
+
+#security-section .sect-sub-head-para {
+    font-size: 1.5em;
+    font-weight: 500;
+    max-width: 500px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #000000;
 }
 
 
