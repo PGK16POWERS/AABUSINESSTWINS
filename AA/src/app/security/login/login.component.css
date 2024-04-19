@@ -1,3 +1,8 @@
+#security-section {
+    position: relative;
+    height: 100vh;
+}
+
 .login-parent-div {
     justify-content: center;
     display: grid;
@@ -15,4 +20,13 @@
 
 .field-input-parent .field-inp-div:nth-child(2) {
     grid-area: b;
+}
+
+.sec-bg-pic {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
 }
