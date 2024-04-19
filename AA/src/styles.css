@@ -847,7 +847,7 @@ footer .footer-modal {
     display: grid;
     width: 500px;
     height: 100%;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:  
     "a b"
