@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  ngOnInit(): void {
+
+    const subBtn = document.querySelector(".sub-btn") as HTMLElement;
+    const formDiv = document.querySelector(".field-input-parent") as HTMLElement;
+
+    var formDivLength = formDiv.offsetWidth;
+    subBtn.style.width = formDivLength + "px"
+
+    
+  }
+
 }
