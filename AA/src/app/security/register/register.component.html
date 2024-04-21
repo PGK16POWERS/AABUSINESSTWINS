@@ -16,13 +16,18 @@
             </div>
             <div class="field-inp-div">
                 <input type="text" class="inp-field" name="lname" id="lname" [(ngModel)]="checkData.lname" #lnameInp="ngModel" pattern="[A-Za-z\s]+" required placeholder="Last Name" autocomplete="family-name">
-                <smal
+                <small id="error-message" *ngIf="lnameInp.invalid && lnameInp.touched && lnameInp.dirty">Invalid Input</small>
+                <small id="error-message" *ngIf="lnameInp.touched && lnameInp.pristine">Invalid Input</small>
             </div>
             <div class="field-inp-div">
-                <input type="email" class="inp-field" name="emailInp" id="" required email placeholder="Email" autocomplete="email">
+                <input type="email" class="inp-field" name="email" id="formEmailInp" [(ngModel)]="checkData.email" #emailInp="ngModel" required email placeholder="Email" autocomplete="email">
+                <small id="error-message" *ngIf="emailInp.invalid && emailInp.touched && emailInp.pristine">Please fill field</small>
+                <small id="error-message" *ngIf="emailInp.dirty && emailInp.invalid && emailInp.touched">Invalid</small>
             </div>
             <div class="field-inp-div">
-                <input type="text" class="inp-field" name="" id="" required placeholder="Create Username">
+                <input type="text" class="inp-field" name="username" id="usernameInp" [(ngModel)]="checkData.username" #usernameInp="ngModel" required placeholder="Create Username">
+                <small id="error-message" *ngIf="usernameInp.touched && usernameInp.pristine">Please fill field</small>
+                <small id="error-message" *ngIf="usernameInp.dirty && usernameInp.invalid && usernameInp.touched">Invalid</small>
             </div>
             <div class="field-inp-div">
                 <input type="password" class="inp-field" name="password" id="passwordInp" [(ngModel)]="checkData.password" #passwordInp="ngModel" required placeholder="Password">
@@ -39,7 +44,7 @@
             </div>
         </div>
         
-        <button type="button" class="def-btn form-btn sub-btn" id="create-btn">Create Account</button>
+        <button type="button" class="def-btn form-btn sub-btn" id="create-btn" [disabled]="signupForm.invalid">Create Account</button>
 
         <a href="/security/login" class="redi-link">Already a member?</a>
    
