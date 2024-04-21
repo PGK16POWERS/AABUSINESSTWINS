@@ -15,7 +15,8 @@
                 <small id="error-message" *ngIf="nameInp.touched && nameInp.pristine">Invalid Input</small>
             </div>
             <div class="field-inp-div">
-                <input type="text" class="inp-field" name="" id="" required placeholder="Last Name" autocomplete="family-name">
+                <input type="text" class="inp-field" name="lname" id="lname" [(ngModel)]="checkData.lname" #lnameInp="ngModel" pattern="[A-Za-z\s]+" required placeholder="Last Name" autocomplete="family-name">
+                <smal
             </div>
             <div class="field-inp-div">
                 <input type="email" class="inp-field" name="emailInp" id="" required email placeholder="Email" autocomplete="email">
@@ -29,7 +30,9 @@
                 <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">Password must be at least 8 characters long, include an uppercase letter, and a number.</small>
             </div>
             <div class="field-inp-div">
-                <input type="password" class="inp-field" name="" id="" required placeholder="Confirm Password">
+                <input type="password" class="inp-field" name="conpassword" id="conpassword" required placeholder="Confirm Password" [(ngModel)]="checkData.conPassword" password #conPasswordInp="ngModel">
+                <small id="error-message" *ngIf="conPasswordInp.invalid && conPasswordInp.touched && conPasswordInp.pristine">Please fill field</small>
+                <small id="error-message" *ngIf="checkData.password && checkData.conPassword && checkData.password !== checkData.conPassword">Password don't match</small>
             </div>
             <div class="field-inp-div">
                 <input type="text" class="inp-field" name="" id="" required placeholder="LinkedIn (Optional)">
