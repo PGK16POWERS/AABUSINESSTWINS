@@ -7,6 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  checkData = {
+    name: '',
+    email: '',
+    password: '',
+    conPassword:'',
+  };
+
+  onSubmit() :void {
+    console.log("User Data: " + this.checkData);
+  }
+
+  checkPasswordCriteria(password: string) :boolean {
+    const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    return regex.test(password);
+  }
+
   ngOnInit(): void {
 
     const subBtn = document.querySelector(".sub-btn") as HTMLElement;

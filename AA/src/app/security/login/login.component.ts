@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  checkData: any= {};
+
+  onSubmit() :void {
+    console.log("User Data: " + this.checkData);
+  }
 
   ngOnInit(): void {
 
@@ -15,7 +20,6 @@ export class LoginComponent {
     var formDivLength = formDiv.offsetWidth;
     subBtn.style.width = formDivLength + "px"
 
-    
   }
 
 }
