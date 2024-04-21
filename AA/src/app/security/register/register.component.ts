@@ -9,6 +9,7 @@ export class RegisterComponent implements OnInit {
 
   checkData = {
     name: '',
+    lname: '',
     email: '',
     password: '',
     conPassword:'',
