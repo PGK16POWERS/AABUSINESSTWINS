@@ -90,7 +90,16 @@ section, footer {
     background-color: white;
 }
 
+#error-message {
+    color: rgb(255,0,30);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
 
+#login-btn:disabled {
+    opacity: 50%;
+}
 
 
 
