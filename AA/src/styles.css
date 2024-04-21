@@ -101,6 +101,10 @@ section, footer {
     opacity: 50%;
 }
 
+#create-btn:disabled {
+    opacity: 50%;
+}
+
 
 
 
