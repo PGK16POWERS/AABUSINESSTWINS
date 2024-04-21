@@ -1,5 +1,6 @@
 <section id="security-section">
-    <form action="/register-account" method="post" id="security-form">
+
+    <form #signupForm="ngForm" action="/register-account" method="post" id="security-form" (onSubmit)="onSubmit()" novalidate>
 
         <img src="assets/brand/brandlogo2.svg" class="sec-brand-logo">
 
@@ -9,7 +10,9 @@
 
         <div class="field-input-parent">
             <div class="field-inp-div">
-                <input type="text" class="inp-field" name="name" id="nameInp" required placeholder="Name" autocomplete="name">
+                <input type="text" class="inp-field" name="name" id="nameInp" [(ngModel)]="checkData.name" #nameInp="ngModel" pattern="[A-Za-z\s]+" required placeholder="Name" autocomplete="name">
+                <small id="error-message" *ngIf="nameInp.invalid && nameInp.touched && nameInp.dirty">Inavlid Input</small>
+                <small id="error-message" *ngIf="nameInp.touched && nameInp.pristine">Invalid Input</small>
             </div>
             <div class="field-inp-div">
                 <input type="text" class="inp-field" name="" id="" required placeholder="Last Name" autocomplete="family-name">
@@ -21,7 +24,9 @@
                 <input type="text" class="inp-field" name="" id="" required placeholder="Create Username">
             </div>
             <div class="field-inp-div">
-                <input type="password" password class="inp-field" name="" id="" required placeholder="Password">
+                <input type="password" class="inp-field" name="password" id="passwordInp" [(ngModel)]="checkData.password" #passwordInp="ngModel" required placeholder="Password">
+                <small id="error-message" *ngIf="passwordInp.invalid && passwordInp.touched && passwordInp.pristine">Please fill field</small>
+                <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">Password must be at least 8 characters long, include an uppercase letter, and a number.</small>
             </div>
             <div class="field-inp-div">
                 <input type="password" class="inp-field" name="" id="" required placeholder="Confirm Password">

@@ -1,25 +1,29 @@
 <section id="security-section">
-    <form action="/register-account" method="post" id="security-form">
+
+    <form #loginForm="ngForm" action="/register-account" method="post" id="security-form" (ngSubmit)="onSubmit()" novalidate>
 
         <img src="assets/brand/brandlogo2.svg" class="sec-brand-logo">
 
         <span class="sect-sub-head-para">
-            Create a new account with AA business Twins
+            Login to your existing account
         </span>
 
         <div class="field-input-parent login-parent-div">
 
             <div class="field-inp-div">
-                <input type="text" class="inp-field" name="" id="" required placeholder="Create Username">
+                <input type="text" class="inp-field" name="email" id="emailInpForm" [(ngModel)]="checkData.email" #emailInp="ngModel" required placeholder="Email Address" email>
+                <small id="error-message" *ngIf="emailInp.touched && emailInp.pristine">Please fill field</small>
+                <small id="error-message" *ngIf="emailInp.dirty && emailInp.invalid && emailInp.touched">Invalid</small>
             </div>
 
             <div class="field-inp-div">
-                <input type="password" password class="inp-field" name="" id="" required placeholder="Password">
+                <input type="password" password class="inp-field" name="password" id="passwordInpForm" [(ngModel)]="checkData.password" #passwordInp="ngModel" required placeholder="Password">
+                <small id="error-message" *ngIf="passwordInp.touched && passwordInp.pristine">Please fill field</small>
             </div>
 
         </div>
         
-        <button type="button" class="def-btn form-btn sub-btn" id="login-btn">Login</button>
+        <button type="button" class="def-btn form-btn sub-btn" id="login-btn" [disabled]="loginForm.invalid">Login</button>
 
         <a href="/security/register" class="redi-link">Not a member?</a>
    
