@@ -1,5 +1,6 @@
 #security-section {
-    height: 100vh;
+    position: relative;
+    height: 100%;
 }
 
 .redirect-btn-div {
@@ -15,7 +16,7 @@
 
 .or-div span {
     font-size: 1.2em;
-    
+
 }
 
 #security-section .line {
