@@ -1,27 +1,30 @@
-.redirect-btn-div {
+#main-security-frame {
+    position: fixed;
+}
+
+.brand-logo {
+    width: 50px;
+}
+
+.center-parent-div {
+    width:450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
 }
 
-.or-div {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.or-div span {
-    font-size: 1.2em;
-
-}
-
-#security-section .line {
-    background-color: #000000;
-    width: 60px;
+.sub-para {
+    max-width: 350px;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 .rd-party-parent {
     padding: 1rem;
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -33,7 +36,7 @@
     padding: 1rem;
     width: 100%;
     background-color: #ffffff;
-    border: 2px solid #000000;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,4 +58,31 @@
 .ss-para {
     font-size: 1em;
     letter-spacing: 1px;
+}
+              
+
+@media (max-width: 600px) {
+    section {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        align-items: flex-start;
+    }
+
+    .center-parent-div {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .inp-field {
+        font-size: 1.2em;
+    }
+
+
+    .form {
+        gap: 1.5rem;
+    }
+
+    .form-parent {
+        gap: 1rem;
+    }
 }
