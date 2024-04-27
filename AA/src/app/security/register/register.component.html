@@ -1,54 +1,63 @@
-<section id="security-section">
+<section id="main-security-frame">
 
-    <form #signupForm="ngForm" action="/register-account" method="post" id="security-form" (onSubmit)="onSubmit()" novalidate>
+    <div class="center-parent-div">
 
-        <img src="assets/brand/brandlogo2.svg" class="sec-brand-logo">
-
-        <span class="sect-sub-head-para">
-            Create a new account with AA business Twins
+        <span class="form-header">
+            New Member
         </span>
 
-        <div class="field-input-parent">
-            <div class="field-inp-div">
-                <input type="text" class="inp-field" name="name" id="nameInp" [(ngModel)]="checkData.name" #nameInp="ngModel" pattern="[A-Za-z\s]+" required placeholder="Name" autocomplete="name">
-                <small id="error-message" *ngIf="nameInp.invalid && nameInp.touched && nameInp.dirty">Inavlid Input</small>
-                <small id="error-message" *ngIf="nameInp.touched && nameInp.pristine">Invalid Input</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="text" class="inp-field" name="lname" id="lname" [(ngModel)]="checkData.lname" #lnameInp="ngModel" pattern="[A-Za-z\s]+" required placeholder="Last Name" autocomplete="family-name">
-                <small id="error-message" *ngIf="lnameInp.invalid && lnameInp.touched && lnameInp.dirty">Invalid Input</small>
-                <small id="error-message" *ngIf="lnameInp.touched && lnameInp.pristine">Invalid Input</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="email" class="inp-field" name="email" id="formEmailInp" [(ngModel)]="checkData.email" #emailInp="ngModel" required email placeholder="Email" autocomplete="email">
-                <small id="error-message" *ngIf="emailInp.invalid && emailInp.touched && emailInp.pristine">Please fill field</small>
-                <small id="error-message" *ngIf="emailInp.dirty && emailInp.invalid && emailInp.touched">Invalid</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="text" class="inp-field" name="username" id="usernameInp" [(ngModel)]="checkData.username" #usernameInp="ngModel" required placeholder="Create Username">
-                <small id="error-message" *ngIf="usernameInp.touched && usernameInp.pristine">Please fill field</small>
-                <small id="error-message" *ngIf="usernameInp.dirty && usernameInp.invalid && usernameInp.touched">Invalid</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="password" class="inp-field" name="password" id="passwordInp" [(ngModel)]="checkData.password" #passwordInp="ngModel" required placeholder="Password">
-                <small id="error-message" *ngIf="passwordInp.invalid && passwordInp.touched && passwordInp.pristine">Please fill field</small>
-                <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">Password must be at least 8 characters long, include an uppercase letter, and a number.</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="password" class="inp-field" name="conpassword" id="conpassword" required placeholder="Confirm Password" [(ngModel)]="checkData.conPassword" password #conPasswordInp="ngModel">
-                <small id="error-message" *ngIf="conPasswordInp.invalid && conPasswordInp.touched && conPasswordInp.pristine">Please fill field</small>
-                <small id="error-message" *ngIf="checkData.password && checkData.conPassword && checkData.password !== checkData.conPassword">Password don't match</small>
-            </div>
-            <div class="field-inp-div">
-                <input type="text" class="inp-field" name="" id="" required placeholder="LinkedIn (Optional)">
-            </div>
-        </div>
-        
-        <button type="button" class="def-btn form-btn sub-btn" id="create-btn" [disabled]="signupForm.invalid">Create Account</button>
+        <a href="/" class="sub-para form-para">Back to security page</a>
 
-        <a href="/security/login" class="redi-link">Already a member?</a>
-   
-    </form>
-    
-    <img src="assets/securitypage/securitypage.svg" class="sec-bg-pic">
+        <form #signupForm="ngForm" (ngSubmit)="onSubmit()" action="/creatAcc" method="post" class="form" novalidate>
+
+            <div class="form-parent">
+
+                <div class="sub-inp-child">
+                    <div class="inp-child">
+                        <img src="assets/form-icons/user.svg" class="form-icon">
+                        <input type="text" [(ngModel)]="checkData.name" #nameInp="ngModel" pattern="[A-Za-z\s]+" name="name" id="nameInp" class="inp-field" required autocomplete="name" placeholder="name">
+                    </div>
+                    <small id="error-message" *ngIf="nameInp.touched && nameInp.pristine">Invalid Name</small>
+                    <small id="error-message" *ngIf="nameInp.invalid && nameInp.touched && nameInp.dirty">Your Real Name Bruhh</small>
+                </div>              
+
+                <div class="sub-inp-child">
+                    <div class="inp-child">
+                        <img src="assets/form-icons/email.svg" class="form-icon">
+                        <input type="email" email name="email" id="emailInp" class="inp-field" [(ngModel)]="checkData.email" #emailInp="ngModel" required autocomplete="email" placeholder="Email Address" inputmode="email">
+                    </div>
+                    <small id="error-message" *ngIf="emailInp.touched && emailInp.pristine">Invalid Email</small>
+                    <small id="error-message" *ngIf="emailInp.touched && emailInp.dirty && emailInp.invalid">Invalid Email</small>
+                </div>    
+
+                <div class="sub-inp-child">
+                    <div class="inp-child">
+                        <img src="assets/form-icons/password.svg" class="form-icon">
+                        <input type="password" name="password" password [(ngModel)]="checkData.password" #passwordInp="ngModel" id="passwordInp" class="inp-field" required autocomplete="current-password" placeholder="Password">
+                        <img src="assets/form-icons/visibility_off.svg" class="form-icon" id="passwordHidden">
+                        <img src="assets/form-icons/visibility.svg" class="form-icon" id="passwordShown">
+                    </div>
+                    <small id="error-message" *ngIf="passwordInp.touched && passwordInp.pristine">Create password</small>
+                    <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">guda Marjella</small>
+                    <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && passwordInp.dirty"> </small>
+                </div>
+
+                <div class="sub-inp-child">
+                    <div class="inp-child">
+                        <img src="assets/form-icons/password.svg" class="form-icon">
+                        <input type="password" name="conPassword" id="conPasswordInp" [(ngModel)]="checkData.conPassword" #conPasswordInp="ngModel" class="inp-field" required placeholder="Confirm Password">
+                    </div>
+                    <small id="error-message" *ngIf="conPasswordInp.touched && conPasswordInp.pristine">Invalid Input</small>
+                    <small id="error-message" *ngIf="checkData.password && checkData.conPassword && checkData.password !== checkData.conPassword">Passwords don't match</small>
+                </div>
+
+            </div>
+
+            <button type="submit" class="def-btn sub-btn" [disabled]="signupForm.invalid">Create Account</button>
+        </form>
+
+        <a href="security/login" class="sub-para form-redirect-link">Go to login page</a>
+
+    </div>
+
 </section>
