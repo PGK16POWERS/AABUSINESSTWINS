@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingpageComponent implements OnInit {
 
+  checkData = {
+    email: ''
+  };
+
+  onSubmit() :void {
+    console.log("User Data: " + this.checkData);
+  }
+
   ngOnInit() {
 
       const menu = document.querySelector('.burger-menu') as HTMLElement;
@@ -31,20 +39,14 @@ export class LandingpageComponent implements OnInit {
         }
       });
 
-      const answers = document.querySelectorAll(".faq-ans") as NodeListOf<HTMLElement>;
-
       faqChildDiv.forEach(child => {
 
         child.addEventListener("click", () => {
 
-          answers.forEach(answer => {
-            answer.style.display = "flex";
+          const answers = child.querySelectorAll(".faq-ans") as NodeListOf<HTMLElement>;
 
-            if (answer.style.display === "flex") {
-              child.addEventListener("click", ()=> {
-                answer.style.display = "none";
-              })
-            }
+          answers.forEach(answer => {
+            answer.classList.toggle("flexed");
           });
 
         });
