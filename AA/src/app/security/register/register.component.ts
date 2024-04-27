@@ -9,31 +9,46 @@ export class RegisterComponent implements OnInit {
 
   checkData = {
     name: '',
-    lname: '',
     email: '',
-    username: '',
     password: '',
-    conPassword:'',
-  };
+    conPassword: '',
+  }
 
   onSubmit() :void {
     console.log("User Data: " + this.checkData);
   }
 
   checkPasswordCriteria(password: string) :boolean {
-    const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    const regex = /^(?=.*[A-Z]) (?=.*\d).{8,}$/
     return regex.test(password);
   }
 
   ngOnInit(): void {
 
-    const subBtn = document.querySelector(".sub-btn") as HTMLElement;
-    const formDiv = document.querySelector(".field-input-parent") as HTMLElement;
+    const passwordInp = document.querySelector("#passwordInp") as HTMLElement;
+    const conPasswordInp = document.querySelector("#conPasswordInp") as HTMLElement;
+    const hiddenPasswordIcon = document.querySelector("#passwordHidden") as HTMLElement;
+    const shownPasswordIcon = document.querySelector("#passwordShown") as HTMLElement;
 
-    var formDivLength = formDiv.offsetWidth;
-    subBtn.style.width = formDivLength + "px"
+    hiddenPasswordIcon.addEventListener("click", () => {
+      passwordInp.setAttribute("type","text");
+      hiddenPasswordIcon.style.display ="none";
+      shownPasswordIcon.style.display = "flex";
+    })
 
-    
+    shownPasswordIcon.addEventListener("click", () => {
+      passwordInp.setAttribute("type","password");
+      hiddenPasswordIcon.style.display ="flex";
+      shownPasswordIcon.style.display = "none";
+    })
+
+    conPasswordInp.addEventListener("click", () => {
+      passwordInp.setAttribute("type","password");
+      hiddenPasswordIcon.style.display ="flex";
+      shownPasswordIcon.style.display = "none";
+    })
+
   }
 
 }

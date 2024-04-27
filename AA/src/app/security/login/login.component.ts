@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  checkData: any= {};
+  
+  checkData = {
+    email: '',
+    password: '',
+  }
 
   onSubmit() :void {
     console.log("User Data: " + this.checkData);
@@ -14,11 +18,28 @@ export class LoginComponent {
 
   ngOnInit(): void {
 
-    const subBtn = document.querySelector(".sub-btn") as HTMLElement;
-    const formDiv = document.querySelector(".field-input-parent") as HTMLElement;
+    const passwordInp = document.querySelector("#passwordInp") as HTMLElement;
+    const emailInp = document.querySelector("#emailInp") as HTMLElement;
+    const hiddenPasswordIcon = document.querySelector("#passwordHidden") as HTMLElement;
+    const shownPasswordIcon = document.querySelector("#passwordShown") as HTMLElement;
 
-    var formDivLength = formDiv.offsetWidth;
-    subBtn.style.width = formDivLength + "px"
+    hiddenPasswordIcon.addEventListener("click", () => {
+      passwordInp.setAttribute("type","text");
+      hiddenPasswordIcon.style.display ="none";
+      shownPasswordIcon.style.display = "flex";
+    })
+
+    shownPasswordIcon.addEventListener("click", () => {
+      passwordInp.setAttribute("type","password");
+      hiddenPasswordIcon.style.display ="flex";
+      shownPasswordIcon.style.display = "none";
+    })
+
+    emailInp.addEventListener("click", () => {
+      passwordInp.setAttribute("type","password");
+      hiddenPasswordIcon.style.display ="flex";
+      shownPasswordIcon.style.display = "none";
+    })
 
   }
 
