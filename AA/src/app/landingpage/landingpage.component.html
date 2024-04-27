@@ -235,12 +235,12 @@
 
         <div class="sect-header-div">
             <span class="sect-header-title">
-                Networking and Opportunities
+                Products and Services
             </span>
         </div>
 
         <span class="sect-sub-head-para">
-            Events and Networking <br>Opportunities
+            Products and Services
         </span>
 
         <div class="parent-div">
@@ -252,10 +252,10 @@
                 </div>
 
                 <div class="content-div">
-                    <span class="div-header-title">Start-up Pitch Competition</span>
+                    <span class="div-header-title">Marketing and Advertising</span>
 
                     <div class="redirect-button">
-                        <span class="material-symbols-rounded" id="arrow">
+                        <span class="material-symbols-rounded security-redirect" id="arrow">
                             arrow_forward
                         </span>
                     </div>
@@ -271,10 +271,10 @@
                 </div>
 
                 <div class="content-div">
-                    <span class="div-header-title">Entrepreneurship Workshop series</span>
+                    <span class="div-header-title">Supply Chain Management</span>
 
                     <div class="redirect-button">
-                        <span class="material-symbols-rounded" id="arrow">
+                        <span class="material-symbols-rounded security-redirect" id="arrow">
                             arrow_forward
                         </span>
                     </div>
@@ -290,10 +290,10 @@
                 </div>
 
                 <div class="content-div">
-                    <span class="div-header-title">Investor Networking Mixer</span>
+                    <span class="div-header-title">Facilities Management</span>
 
                     <div class="redirect-button">
-                        <span class="material-symbols-rounded" id="arrow">
+                        <span class="material-symbols-rounded security-redirect" id="arrow">
                             arrow_forward
                         </span>
                     </div>
@@ -309,10 +309,10 @@
                 </div>
 
                 <div class="content-div">
-                    <span class="div-header-title">Innovation Summit</span>
+                    <span class="div-header-title">Training and Development</span>
 
                     <div class="redirect-button">
-                        <span class="material-symbols-rounded" id="arrow">
+                        <span class="material-symbols-rounded security-redirect" id="arrow">
                             arrow_forward
                         </span>
                     </div>
@@ -363,7 +363,7 @@
 
             <div class="child-div networking-child project-child" data-aos="fade-up" data-aos-duration="1000">
 
-                <div class="inner-image-div">
+                <div class="inner-image-div" loading="lazy">
 
                 </div>
 
@@ -444,10 +444,10 @@
                     <span class="fade-title">Founders</span>
 
                     <div class="social-icon-parent">
-                        <img src="/assets/social-icons/whatsapp.svg" alt="whatsapp" class="social-icon">
-                        <img src="/assets/social-icons/instagram.svg" alt="instagram" class="social-icon">
-                        <img src="/assets/social-icons/youtube.svg" alt="youtube" class="social-icon">
-                        <img src="/assets/social-icons/x.svg" alt="x" class="social-icon">
+                        <img src="/assets/social-icons/whatsapp.svg" alt="whatsapp" class="social-icon" loading="lazy">
+                        <img src="/assets/social-icons/instagram.svg" alt="instagram" class="social-icon" loading="lazy">
+                        <img src="/assets/social-icons/youtube.svg" alt="youtube" class="social-icon" loading="lazy">
+                        <img src="/assets/social-icons/x.svg" alt="x" class="social-icon" loading="lazy">
                     </div>
                    
                 </div>
@@ -465,9 +465,9 @@
                     <span class="fade-title">Associate</span>
 
                     <div class="social-icon-parent">
-                        <img src="/assets/social-icons/whatsapp.svg" alt="whatsapp" class="social-icon">
-                        <img src="/assets/social-icons/instagram.svg" alt="instagram" class="social-icon">
-                        <img src="/assets/social-icons/youtube.svg" alt="youtube" class="social-icon">
+                        <img src="/assets/social-icons/whatsapp.svg" alt="whatsapp" class="social-icon" loading="lazy">
+                        <img src="/assets/social-icons/instagram.svg" alt="instagram" class="social-icon" loading="lazy">
+                        <img src="/assets/social-icons/youtube.svg" alt="youtube" class="social-icon" loading="lazy">
                     </div>
 
                 </div>
@@ -572,8 +572,8 @@
             Still not convinced? leave your email address and we'll be in touch
         </span>
 
-        <form action="/newletter" method="post" id="cta-single">
-            <input type="email" id="emailInp" name="email" value="Email Address" email required>
+        <form #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
+            <input type="email" id="emailInp" name="email" value="Email Address" placeholder="Email Address" email [(ngModel)]="checkData.email" #emailInp="ngModel" required>
             <button type="submit" class="def-btn cta-sub-btn">Send</button>
         </form> 
 
