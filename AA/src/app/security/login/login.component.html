@@ -6,7 +6,7 @@
             Welcome Back!
         </span>
 
-        <a href="/" class="sub-para form-para">Back to security page</a>
+        <a href="/security" class="sub-para form-para">Back to security page</a>
 
         <form #loginForm="ngForm" (ngSubmit)="onSubmit()" action="/login" method="get" class="form" novalidate>
 
@@ -37,7 +37,7 @@
             <button type="submit" class="def-btn sub-btn" [disabled]="loginForm.invalid">Login</button>
         </form>
 
-        <a href="security/signup" class="sub-para form-redirect-link">Go to Sign up page</a>
+        <a href="/security/register" class="sub-para form-redirect-link">Go to Sign up page</a>
 
     </div>
 
