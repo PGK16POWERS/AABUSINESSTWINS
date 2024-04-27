@@ -690,7 +690,7 @@ iframe {
     gap: .5rem;
 }
 
-#emailInp {
+#cta-single #emailInp {
     height: 100%;
     border: 0 solid transparent;
     border-radius: 100px;
@@ -702,9 +702,9 @@ iframe {
     width: 100%;
 }
 
-#emailInp:hover,
-#emailInp:active,
-#emailInp:focus {
+#cta-single #emailInp:hover,
+#cta-single #emailInp:active,
+#cta-single #emailInp:focus {
     outline: 0 solid transparent;
 }
 
@@ -800,116 +800,171 @@ footer .footer-modal {
 /* SECURITY PAGES */
 
 
-#security-section {
+#main-security-frame {
+    position: fixed;
+    height: 100%;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 2rem;
 }
 
-.redirect-btn-div {
+.center-parent-div {
+    width:450px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
-    width: 100%;
+    gap: 2rem;
 }
 
-.form-btn {
-    background-color: black;
-    color: white;
-    letter-spacing: 1px;
-    width: 350px;
-    font-weight: 400;
-}
-
-.field-inp-div {
-    width: 100%;
-}
-
-.inp-field {
-    padding: 5px 10px;
+.sub-para {
+    max-width: 350px;
+    text-align: center;
     font-size: 1em;
     letter-spacing: 1px;
-    border: 0 solid transparent;
-    border-bottom: 1px solid #161616;
     font-weight: 400;
-    width: 100%;
 }
 
-.inp-field:focus,
-.inp-field:active,
-.inp-field:hover {
-    outline: 0 solid transparent;
-}
-
-#security-form {
+.rd-party-parent {
+    padding: 1rem;
+    max-width: 400px;
     width: 100%;
-    border: 2px solid transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.field-input-parent {
+.div-child {
+    padding: 1rem;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    display: grid;
-    width: 500px;
-    height: 100%;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:  
-    "a b"
-    "c c"
-    "d d"
-    "e e"
-    "f f"
-    "g g";
-    gap: 1.5rem;
+    gap: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
 
-.field-input-parent .field-inp-div:first-child {
-    grid-area: a;
+.div-child:hover,
+.div-child:active {
+    transform: scale(105%);
 }
 
-.field-input-parent .field-inp-div:nth-child(2) {
-    grid-area: b;
+.ss-icon {
+    width: 30px;
 }
 
-.field-input-parent .field-inp-div:nth-child(3) {
-    grid-area: c;
+.ss-para {
+    font-size: 1em;
+    letter-spacing: 1px;
 }
 
-.field-input-parent .field-inp-div:nth-child(4) {
-    grid-area: d;
+.form-header {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
-.field-input-parent .field-inp-div:nth-child(5) {
-    grid-area: e;
-}
-
-.field-input-parent .field-inp-div:nth-child(6) {
-    grid-area: f;
-}
-
-.field-input-parent .field-inp-div:nth-child(7) {
-    grid-area: g;
-}
-
-.redi-link {
-    font-size: .9em;
+.form-para, .form-redirect-link {
+    font-size: 1em;
     letter-spacing: 1px;
     font-weight: 400;
     color: black;
 }
 
-#security-section .sect-sub-head-para {
-    font-size: 1.5em;
-    font-weight: 500;
-    max-width: 500px;
+.form-redirect-link {
+    font-size: .8em;
     letter-spacing: 1px;
-    text-align: center;
-    color: #000000;
+    font-weight: 400;
+}
+
+.form {
+    padding: 1rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.form-parent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sub-inp-child, .inp-child {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.sub-inp-child {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inp-child {
+    gap: 5px;
+    padding: 5px;
+    border-bottom: 2px solid #161616;
+}
+
+.inp-field {
+    width: 100%;
+    position: relative;
+    padding: 8px 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: black;
+    background-color: transparent;
+    border: 0 solid transparent;
+}
+
+.inp-field:hover,
+.inp-field:active,
+.inp-field:focus {
+    outline: 0 solid transparent;
+}
+
+#passwordShown {
+    display: none;
+}
+
+#error-message {
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: orangered;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.sub-btn:disabled {
+    background-color: #d0d0d0;
+}
+
+.sub-btn {
+    cursor: pointer;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: black;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    padding: 16px;
+    width: 100%;
 }
 
 
@@ -979,8 +1034,6 @@ footer .footer-modal {
     }
 
     /* PARENT DIV AND CHILD */
-
-
 
     /* HEADER SECTION */
 
@@ -1294,23 +1347,12 @@ footer .footer-modal {
 
     /* SECURITY PAGES */
 
-    .field-input-parent {
+    #main-security-frame {
         justify-content: flex-start;
-        display: grid;
-        max-width: 400px;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas:  
-        "a"
-        "b"
-        "c"
-        "d"
-        "e"
-        "f"
-        "g";
-        gap: 1.5rem;
+        align-items: center;
+        
     }
+
+   
 
 }
