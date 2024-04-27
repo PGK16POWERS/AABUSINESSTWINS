@@ -636,6 +636,7 @@ iframe {
    padding: 1rem 3rem;
    border: 1px solid rgb(26, 23, 23);
    border-radius: 100px;
+   cursor: pointer;
 }
 
 #faq .sect-header-title {
