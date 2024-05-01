@@ -106,9 +106,6 @@ section, footer {
 }
 
 
-
-
-
 /* SECTION HEADER AND DIV */
 
 .sect-header-div {
@@ -134,10 +131,6 @@ section, footer {
 /* SECTION HEADER AND DIV */
 
 
-
-
-
-
 /* MODULE HEADER */
 
 .sect-sub-head-para {
@@ -159,8 +152,6 @@ section, footer {
 }
 
 /* MODULE HEADER */
-
-
 
 
 /* PARENT DIV AND CHILD */
@@ -192,9 +183,6 @@ section, footer {
 /* PARENT DIV AND CHILD */
 
 
-
-
-
 /* HEADER SECTION */
 
 #header {
@@ -209,6 +197,7 @@ section, footer {
     background-color: #ffffff;
     backdrop-filter: blur(30%);
     z-index: 999;
+    box-shadow: 0 6px 8px 0 rgba(107, 107, 107, 0.205);
 }
 
 #header nav ul {
@@ -281,8 +270,6 @@ section, footer {
 }
 
 /* HEADER SECTION */
-
-
 
 /* LANDING PAGE */
 
@@ -643,6 +630,13 @@ iframe {
     color: white;
 }
 
+#faq .child-div .content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 .faq-ans {
     display: none;
 }
@@ -666,11 +660,19 @@ iframe {
 }
 
 #faq .child-div .content-div .div-header-title {
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.1em;
 }
 
 #faq .child-div .content-div .div-header-title, .faq-ans {
     color: white;
+}
+
+.faq-ans {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 25px;
 }
 
 /* FAQ SECTION */
