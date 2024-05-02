@@ -11,8 +11,60 @@ export class LandingpageComponent implements OnInit {
     email: ''
   };
 
+  showForm: boolean = true;
+  spinner: boolean = false;
+  error: boolean = false;
+  confirm: boolean = false;
+
   onSubmit() :void {
-    console.log("User Data: " + this.checkData);
+
+    this.showForm = false;
+    this.spinner = true;
+
+    console.log("User Data: " + this.checkData.email);
+
+    fetch('/newsletter-signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: this.checkData.email })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response data if needed
+      console.log('Email sent successfully:', data);
+
+      this.confirm = true;
+
+      setTimeout(() => {
+        this.spinner = false;
+        this.showForm = true;
+      }, 3000);
+
+      setTimeout(() => {
+        this.confirm = false;
+      }, 6000);
+
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+
+      this.error = true;
+
+      setTimeout(() => {
+        this.spinner = false;
+        
+        this.showForm = true;
+        
+      }, 5000);
+
+      setTimeout(() => {
+        this.error = false;
+      }, 6000);
+
+    });
+  
   }
 
   ngOnInit() {
