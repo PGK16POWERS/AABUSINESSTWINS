@@ -4,16 +4,16 @@
     <nav class="header-nav">
         <ul>
             <li>
-                <a href="#" class="header-link">Network</a>
+                <a href="#networking-and-opportunity" class="header-link">Network</a>
             </li>
             <li>
-                <a href="#" class="header-link">Mission</a>
+                <a href="#mission-and-purpose" class="header-link">Mission</a>
             </li>
             <li>
-                <a href="#" class="header-link">Resource</a>
+                <a href="#resources" class="header-link">Resource</a>
             </li>
             <li>
-                <a href="#" class="header-link">FAQ</a>
+                <a href="#faq" class="header-link">FAQ</a>
             </li>
         </ul>
     </nav>
@@ -31,16 +31,16 @@
     <nav>
         <ul>
             <li>
-                <a href="#" class="header-link">Network</a>
+                <a href="#networking-and-opportunity" class="header-link">Network</a>
             </li>
             <li>
-                <a href="#" class="header-link">Mission</a>
+                <a href="#mission-and-purpose" class="header-link">Mission</a>
             </li>
             <li>
-                <a href="#" class="header-link">Resource</a>
+                <a href="#resources" class="header-link">Resource</a>
             </li>
             <li>
-                <a href="#" class="header-link">FAQ</a>
+                <a href="#faq" class="header-link">FAQ</a>
             </li>
         </ul>
     </nav>
@@ -52,7 +52,11 @@
     <div class="top-half">
         
         <div class="th-div">
-            <div class="blue-ball"></div>
+            <div class="blue-ball">
+                <span class="material-symbols-rounded" id="tick">
+                    done
+                </span>
+            </div>
             <span class="th-div-span">Be part of a growing database of entrepreneurs</span>
         </div>
 
@@ -61,7 +65,7 @@
         </span>
 
         <span class="sub-head-para">
-            Step into a world of innovation and collaboration at AA Business Twins, where entreprenurial dreams soar to new heights every day.
+            Our mission is to provide the support and resources you need to transform your business ideas into reality, guiding you every step of the way towards achieving your goals.
         </span>
 
         <button type="button" class="def-btn semi-btn security-redirect">Become a member</button>
@@ -494,11 +498,9 @@
             <div class="child-div">
 
                 <div class="content-div">
-                    <span class="div-header-title">How can AA Business Twins help me with my startup idea(s)?</span>
+                    <span class="div-header-title">What legal services do you offer for startups in South Africa?</span>
                     <span class="div-para faq-ans">
-                        Explore our comprehensive collection of guides and 
-                        tutorials designed to equip entrepreneurs with the knowledge and skills needed to navigate the startup 
-                        journey successfully.
+                        We provide business registration, contract drafting, compliance assistance, and dispute resolution services tailored to startups.
                     </span>
                 </div>
 
@@ -507,11 +509,9 @@
             <div class="child-div">
 
                 <div class="content-div">
-                    <span class="div-header-title">What resources and support services does AA Business Twins offer to entrepreneurs?</span>
+                    <span class="div-header-title">How can your accounting services benefit my startup?</span>
                     <span class="div-para faq-ans">
-                        Enrich your entrepreneurial journey with our
-                        educational content, including webinars,
-                        workshops and online courses.
+                        Our services include bookkeeping, financial statements, tax planning, and cash flow management to help startups manage finances efficiently.
                     </span>
                 </div>
 
@@ -520,12 +520,9 @@
             <div class="child-div">
 
                 <div class="content-div">
-                    <span class="div-header-title">How do I apply to become a part of the AA Business Twins incubation program?</span>
+                    <span class="div-header-title">What IT solutions do you offer for startups?</span>
                     <span class="div-para faq-ans">
-                        Discover tips and strategies for securing funding and
-                        explore various sources of capital, from venture capital
-                        firms to crowdfunding platforms, to fuel your startup's
-                        growth and innovation.
+                        We offer website development, cybersecurity, software implementation, and cloud solutions to enhance operational efficiency..
                     </span>
                 </div>
 
@@ -534,11 +531,9 @@
             <div class="child-div">
 
                 <div class="content-div">
-                    <span class="div-header-title">Can I participate in AA Business Twins events and workshops as a non-member?</span>
+                    <span class="div-header-title">How can your marketing services help my startup stand out?</span>
                     <span class="div-para faq-ans">
-                        From understanding intellectual property rights to drafting contracts
-                        and agreements, we provide essential information and guidance to help 
-                        you protect your startup and mitigate legal risks.
+                        We provide brand strategy, design, website optimization, and digital marketing to help startups attract and retain customers.
                     </span>
                 </div>
 
@@ -547,12 +542,9 @@
             <div class="child-div">
 
                 <div class="content-div">
-                    <span class="div-header-title">What criteria does AA Business Twins consider when selecting startups for incubation?</span>
+                    <span class="div-header-title">What HR services do you provide for startups?</span>
                     <span class="div-para faq-ans">
-                        Our community forums and discussion groups provide a 
-                        supportive enviroment where you can connect with peers, 
-                        ask questions, and receive valuable feedback to help 
-                        you overcome challenges and achieve your goals.
+                        Our services cover recruitment, onboarding, training, payroll, and compliance to support startup growth and employee management.
                     </span>
                 </div>
 
@@ -572,10 +564,20 @@
             Still not convinced? leave your email address and we'll be in touch
         </span>
 
-        <form #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
+        <form *ngIf="showForm" #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
             <input type="email" id="emailInp" name="email" value="Email Address" placeholder="Email Address" email [(ngModel)]="checkData.email" #emailInp="ngModel" required>
-            <button type="submit" class="def-btn cta-sub-btn">Send</button>
+            <button type="submit" class="def-btn cta-sub-btn" #submitBtn [disabled]="newsletter.invalid">Send</button>
         </form> 
+        
+        <div *ngIf="spinner" class="spinner"></div>
+
+        <span *ngIf="error" style="color: red;">
+            Something went wrong please try again or come back later...
+        </span>
+
+        <span *ngIf="confirm" style="color: rgb(3, 161, 3);">
+            Successfully added to the mailling list 👍
+        </span>
 
     </div>
 </section>
@@ -591,21 +593,14 @@
             <div class="footer-link-child-div">
                 <span class="flcd-header">Legal</span>
                 <ul>
+
                     <li>
                         <a href="" class="footer-link">Terms of use</a>
                     </li>
                     <li>
                         <a href="" class="footer-link">Privacy Policy</a>
                     </li>
-                    <li>
-                        <a href="" class="footer-link">Consent and Disclosures</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer-link">Reward Terms</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer-link">Non-rewards Merchants</a>
-                    </li>
+                   
                 </ul>
             </div>
 
@@ -619,9 +614,6 @@
                         <a href="" class="footer-link">Educational Content</a>
                     </li>
                     <li>
-                        <a href="" class="footer-link">Funding Opportunities</a>
-                    </li>
-                    <li>
                         <a href="" class="footer-link">Legal and Regulatory</a>
                     </li>
                     <li>
@@ -631,19 +623,22 @@
             </div>
 
             <div class="footer-link-child-div">
-                <span class="flcd-header">Company</span>
+                <span class="flcd-header">Services</span>
                 <ul>
                     <li>
-                        <a href="" class="footer-link">Careers</a>
+                        <a href="" class="footer-link">Legal and Compliance Services</a>
                     </li>
                     <li>
-                        <a href="" class="footer-link">Mission and Vision</a>
+                        <a href="" class="footer-link">Accounting and Financial Services</a>
                     </li>
                     <li>
-                        <a href="" class="footer-link">Security</a>
+                        <a href="" class="footer-link">IT and Technology Services</a>
                     </li>
                     <li>
-                        <a href="" class="footer-link">Blog and News</a>
+                        <a href="" class="footer-link">Marketing and Branding Services</a>
+                    </li>
+                    <li>
+                        <a href="" class="footer-link">Human Resources (HR) Services</a>
                     </li>
                 </ul>
             </div>
@@ -661,8 +656,7 @@
                 <img src="/assets/social-icons/x.svg" alt="x" class="social-icon">
             </div>
         </div>
-    </div>
 
-    
+    </div>
 
 </footer>
