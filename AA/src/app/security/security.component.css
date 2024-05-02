@@ -3,7 +3,7 @@
 }
 
 .brand-logo {
-    width: 50px;
+    width: 130px;
 }
 
 .center-parent-div {
@@ -15,11 +15,12 @@
 }
 
 .sub-para {
-    max-width: 350px;
+    max-width: 400px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     letter-spacing: 1px;
     font-weight: 400;
+    margin-top: 1rem;
 }
 
 .rd-party-parent {
@@ -30,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .div-child {
