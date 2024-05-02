@@ -1,0 +1,71 @@
+#user-interface-parent {
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
+#user-interface-parent section {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.side-panel {
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 0 solid transparent;
+    border-radius: 0 5px 5px 0;
+}
+
+.side-panel-top {
+    padding: 1rem;
+}
+
+.company-logo-div {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border: 0 solid transparent;
+    border-radius: 100px
+}
+
+.side-panel-middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spm-child {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dashboard-icon {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+#dashboard-icon:hover,
+#dashboard-icon:active {
+    transform: scale(105%);
+}
+
+.side-panel-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}

@@ -4,6 +4,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { SecurityComponent } from './security/security.component';
 import { LoginComponent } from './security/login/login.component';
 import { RegisterComponent } from './security/register/register.component';
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'security/register',
     component: RegisterComponent
+  }, 
+  {
+    path: 'user-dashboard',
+    component: UserInterfaceComponent
   }
 ];
 
