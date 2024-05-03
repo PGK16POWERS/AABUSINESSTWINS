@@ -13,7 +13,7 @@ export class SecurityComponent implements OnInit {
       const googleBtn = document.querySelector("#google-opt") as HTMLElement;
 
       regBtn.addEventListener("click", () => {
-        window.location.href = "security/register"
+        window.location.pathname = "/security/register"
       });
 
       facebookBtn.addEventListener("click", () => {

@@ -17,16 +17,14 @@ const routes: Routes = [
   {
     path:'security',
     component: SecurityComponent,
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      }
-    ]
+  },
+  {
+    path: 'security/login',
+    component: LoginComponent
+  },
+  {
+    path: 'security/register',
+    component: RegisterComponent
   },
   {
     path: 'user-dashboard',

@@ -74,6 +74,7 @@ export class LandingpageComponent implements OnInit {
       const floatingNav = document.querySelector("#floating-menu") as HTMLElement;
       const headerBtn = document.querySelectorAll(".security-redirect") as NodeListOf<HTMLElement>;
       const faqChildDiv = document.querySelectorAll(".child-div") as NodeListOf<HTMLElement>;
+      const splashBg = document.querySelector("#splash-bg") as HTMLElement;
 
       var headerHeight = header.offsetHeight;
       floatingNav.style.top = headerHeight + "px";
@@ -109,7 +110,11 @@ export class LandingpageComponent implements OnInit {
         btn.addEventListener("click", () => {
           window.location.href ="/security";
         })
-      })
+      });
+
+      setTimeout(() => {
+        splashBg.classList.add("moveUpBg");
+    }, 3000); // 3000 milliseconds = 3 seconds
       
   }
 
