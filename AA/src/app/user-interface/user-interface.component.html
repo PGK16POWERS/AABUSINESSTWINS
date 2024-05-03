@@ -40,24 +40,30 @@
         </div>
 
         <div class="side-panel-middle">
-
-            <div class="spm-child">
-                <span class="material-symbols-rounded" id="dashboard-icon">
+            
+            <a class="spm-child" routerLink="/user-dashboard/home">
+                <div>
+                    <span class="material-symbols-rounded" id="dashboard-icon">
                     home
-                </span>
-            </div>
+                    </span>
+                </div>
+            </a>
 
-            <div class="spm-child">
-                <span class="material-symbols-rounded" id="dashboard-icon">
+            <a class="spm-child" routerLink="/user-dashboard/video-content">
+                <div >
+                    <span class="material-symbols-rounded" id="dashboard-icon">
                     smart_display
-                </span>
-            </div>
+                    </span>
+                </div>
+            </a>
 
-            <div class="spm-child">
-                <span class="material-symbols-rounded" id="dashboard-icon">
+            <a class="spm-child" routerLink="/user-dashboard/events">
+                <div>
+                    <span class="material-symbols-rounded" id="dashboard-icon">
                     event_note
-                </span>
-            </div>
+                    </span>
+                </div>
+            </a>
 
         </div>
 
@@ -72,6 +78,6 @@
     </div>
 
     <div class="content-screen">
-
+        <router-outlet></router-outlet>
     </div>
 </div>
