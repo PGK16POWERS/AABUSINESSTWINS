@@ -34,7 +34,8 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
+        pathMatch:'full'
       },
       {
         path: 'video-content',
