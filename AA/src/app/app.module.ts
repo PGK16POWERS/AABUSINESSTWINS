@@ -9,6 +9,9 @@ import { SecurityComponent } from './security/security.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
 import { LoginComponent } from './security/login/login.component';
 import { RegisterComponent } from './security/register/register.component';
+import { HomeComponent } from './user-interface/home/home.component';
+import { VideoContentComponent } from './user-interface/video-content/video-content.component';
+import { EventsComponent } from './user-interface/events/events.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { RegisterComponent } from './security/register/register.component';
     SecurityComponent,
     UserInterfaceComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    VideoContentComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
