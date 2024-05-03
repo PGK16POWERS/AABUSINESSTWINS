@@ -1,17 +1,15 @@
 #user-interface-parent {
-    display: flex;
-    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:  
+    "a b"
+    "a c";
 }
 
-#user-interface-parent section {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-}
-
+/* SIDE PANEL STYLES */
 .side-panel {
     position: relative;
     background-color: black;
@@ -21,6 +19,7 @@
     gap: 1rem;
     border: 0 solid transparent;
     border-radius: 0 5px 5px 0;
+    grid-area: a;
 }
 
 .side-panel-top {
@@ -45,15 +44,24 @@
 
 .spm-child {
     height: 60px;
+    width: 90%;
+    border: 0 solid transparent;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.spm-child:hover {
+    background-color: rgba(128, 128, 128, 0.365);
 }
 
 #dashboard-icon {
     color: white;
     font-size: 35px;
-    cursor: pointer;
+    
     transition-duration: .3s;
 }
 
@@ -69,3 +77,109 @@
     height: auto;
     padding: 1rem;
 }
+/* SIDE PANEL STYLES */
+
+
+
+
+/* TOP PANEL STYLES */
+
+.top-panel {
+    grid-area: b;
+    border: 2px solid yellowgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.user-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#user-name {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.util-component-parent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.alert-icon-div, .setting-icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid transparent;
+    border-radius: 5px
+}
+
+.search-icon-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    height: 50px;
+    width: 400px;
+    padding: .5rem;
+    background-color: rgb(238, 238, 238);
+}
+
+.util-bg {
+    background-color: rgb(238, 238, 238);
+    height: 50px;
+    width: 50px;
+}
+
+.search-inp-field {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #161616;
+    border: 0 solid transparent;
+}
+
+.search-inp-field:hover,
+.search-inp-field:active,
+.search-inp-field:focus {
+    outline: 0 solid transparent;
+}
+
+#top-panel-icon {
+    color: rgb(144, 144, 144);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* TOP PANEL STYLES */
+
+
+
+
+
+
+
+
+
+
+/* CONTENT SECTION STYLES */
+
+.content-screen {
+    grid-area: c;
+    padding: 1rem;
+    border: 2px solid salmon;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENT SECTION STYLES */
