@@ -22,23 +22,28 @@ export class LoginComponent {
     const emailInp = document.querySelector("#emailInp") as HTMLElement;
     const hiddenPasswordIcon = document.querySelector("#passwordHidden") as HTMLElement;
     const shownPasswordIcon = document.querySelector("#passwordShown") as HTMLElement;
+    const subBtn = document.querySelector(".sub-btn") as HTMLElement;
 
     hiddenPasswordIcon.addEventListener("click", () => {
       passwordInp.setAttribute("type","text");
       hiddenPasswordIcon.style.display ="none";
       shownPasswordIcon.style.display = "flex";
-    })
+    });
 
     shownPasswordIcon.addEventListener("click", () => {
       passwordInp.setAttribute("type","password");
       hiddenPasswordIcon.style.display ="flex";
       shownPasswordIcon.style.display = "none";
-    })
+    });
 
     emailInp.addEventListener("click", () => {
       passwordInp.setAttribute("type","password");
       hiddenPasswordIcon.style.display ="flex";
       shownPasswordIcon.style.display = "none";
+    });
+
+    subBtn.addEventListener("click", () => {
+      window.location.href = "/user-dashboard/home"
     })
 
   }
