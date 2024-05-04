@@ -1,2 +1,2 @@
 # AABUSINESSTWINS
-Web application
+Business management and service providing platform for new and old entrepreneurs.
