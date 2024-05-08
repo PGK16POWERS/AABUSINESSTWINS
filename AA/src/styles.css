@@ -698,7 +698,7 @@ iframe {
     background-color: #063f68;
     padding: 1rem;
     border: 0 solid transparent;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -707,16 +707,23 @@ iframe {
     gap: 1rem;
 }
 
-#cta-single input {
+#cta-single input , .cta-inp-child{
     height: 100%;
     border: 0 solid transparent;
-    border-radius: 100px;
+    border-radius: 5px;
     padding: 0.6rem 1rem;
     font-size: 1em;
     letter-spacing: 1px;
     color: white;
     background-color: #125381;
     width: 100%;
+}
+
+.cta-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
 }
 
 #cta-single input:hover,
@@ -727,8 +734,9 @@ iframe {
 
 .cta-sub-btn {
     background-color: #042339;
-    border-radius: 100px;
+    border-radius: 5px;
     width: 100%;
+    height: 60px;
 }
 
 #call-to-action-one .sect-modal {
@@ -742,6 +750,40 @@ iframe {
 
 #call-to-action-one .sect-sub-head-para ,.sect-sub-para {
     color:white
+}
+
+#servicesOffered {
+    height: 100%;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #125381;
+    width: 100%;
+    appearance: none; /* Remove default dropdown arrow */
+}
+
+.like-that {
+    outline: 0 solid transparent;
+    border: 0 solid transparent;
+}
+
+.like-that:focus,
+.like-that:active,
+.like-that:hover {
+    outline: 0 solid transparent;
+    border: 0 solid transparent;
+}
+
+#cta-icon {
+    font-size: 25px;
+    color: white;
+}
+
+.cta-sub-btn:disabled {
+    background-color: #04233968;
 }
 
 /* CALL TO ACTION */
@@ -1302,7 +1344,7 @@ footer .footer-modal {
 
     .cta-sub-btn {
         background-color: #042339;
-        width: auto;
+        width: 100%;
     }
 
     /* CALL TO ACTION 2 */
