@@ -10,7 +10,8 @@ export class LandingpageComponent implements OnInit {
   checkData = {
     fullName:'',
     phoneNumber: '',
-    email: ''
+    email: '',
+    servicesOffered:''
   };
 
   showForm: boolean = true;
