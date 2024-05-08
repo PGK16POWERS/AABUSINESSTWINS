@@ -565,7 +565,7 @@
     <div class="sect-modal white-modal" data-aos="fade-up" data-aos-duration="1000">
 
         <span class="sect-sub-head-para">
-            Still not convinced? leave your email address and we'll be in touch
+            Still have more questions? fill the fields below and we'll be in touch:
         </span>
 
         <form *ngIf="showForm" #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
@@ -610,8 +610,8 @@
                     <select id="servicesOffered" name="servicesOffered" [(ngModel)]="checkData.servicesOffered" #servicesOffered="ngModel" class="like-that">
                         <option value="" disabled selected>Select Service</option>
                         <option value="service1">Marketing and Advertising</option>
-                        <option value="service2">Service 2</option>
-                        <option value="service3">Service 3</option>
+                        <option value="service2">Supply Chain Services</option>
+                        <option value="service3">Logistics</option>
                         <!-- Add more options as needed -->
                     </select>
                 </div>
