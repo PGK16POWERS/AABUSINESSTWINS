@@ -569,6 +569,8 @@
         </span>
 
         <form *ngIf="showForm" #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
+            <input type="text" id="fullNameInp" name="fullname"  placeholder="Full Name" [(ngModel)]="checkData.fullName" #fullNameInp="ngModel" required autocomplete="name">
+            <input type="tel" id="phoneNumerInp" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="checkData.phoneNumber" #phoneNumberInp="ngModel" required autocomplete="tel">
             <input type="email" id="emailInp" name="email" value="Email Address" placeholder="Email Address" email [(ngModel)]="checkData.email" #emailInp="ngModel" required>
             <button type="submit" class="def-btn cta-sub-btn" #submitBtn [disabled]="newsletter.invalid">Send</button>
         </form> 
