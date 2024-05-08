@@ -38,6 +38,7 @@ button {
     --pops: "Poppins", sans-serif;
     --nuns: "Nunito", sans-serif;
     --monts: "Montserrat", sans-serif;
+    --offWhite: #c3c3c3;
 }
 
 body {
@@ -103,6 +104,20 @@ section, footer {
 
 #create-btn:disabled {
     opacity: 50%;
+}
+
+/* Style for the input field placeholder */
+::-webkit-input-placeholder { /* For Chrome, Safari, and newer versions of Opera */
+    color: var(--offWhite); /* Change this to the desired color */
+}
+::-moz-placeholder { /* For Firefox 19+ */
+    color: var(--offWhite); /* Change this to the desired color */
+}
+:-ms-input-placeholder { /* For IE 10+ */
+    color: var(--offWhite); /* Change this to the desired color */
+}
+:-moz-placeholder { /* For older versions of Firefox */
+    color: var(--offWhite); /* Change this to the desired color */
 }
 
 
@@ -681,18 +696,18 @@ iframe {
 
 #cta-single {
     background-color: #063f68;
-    padding: .5rem;
+    padding: 1rem;
     border: 0 solid transparent;
-    border-radius: 100px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     max-width: 500px;
     width: 100%;
-    gap: .5rem;
+    gap: 1rem;
 }
 
-#cta-single #emailInp {
+#cta-single input {
     height: 100%;
     border: 0 solid transparent;
     border-radius: 100px;
@@ -700,20 +715,20 @@ iframe {
     font-size: 1em;
     letter-spacing: 1px;
     color: white;
-    background-color: #063f68;
+    background-color: #125381;
     width: 100%;
 }
 
-#cta-single #emailInp:hover,
-#cta-single #emailInp:active,
-#cta-single #emailInp:focus {
+#cta-single input:hover,
+#cta-single input:active,
+#cta-single input:focus {
     outline: 0 solid transparent;
 }
 
 .cta-sub-btn {
     background-color: #042339;
     border-radius: 100px;
-    width: 150px;
+    width: 100%;
 }
 
 #call-to-action-one .sect-modal {
