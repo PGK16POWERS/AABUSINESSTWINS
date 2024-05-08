@@ -569,11 +569,58 @@
         </span>
 
         <form *ngIf="showForm" #newsletter="ngForm" action="/newletter" method="post" id="cta-single" (ngSubmit)="onSubmit()" novalidate>
-            <input type="text" id="fullNameInp" name="fullname"  placeholder="Full Name" [(ngModel)]="checkData.fullName" #fullNameInp="ngModel" required autocomplete="name">
-            <input type="tel" id="phoneNumerInp" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="checkData.phoneNumber" #phoneNumberInp="ngModel" required autocomplete="tel">
-            <input type="email" id="emailInp" name="email" value="Email Address" placeholder="Email Address" email [(ngModel)]="checkData.email" #emailInp="ngModel" required>
+
+            <div class="cta-inp-child">
+                <div class="cta-child">
+                    <span class="material-symbols-rounded" id="cta-icon">
+                        person
+                    </span>
+                    <input type="text" [(ngModel)]="checkData.fullName" #fullNameInp="ngModel" pattern="[A-Za-z\s]+" name="fullName" id="fullNameInp" required autocomplete="name" placeholder="Full Name">
+                </div>
+                <small id="error-message" *ngIf="fullNameInp.touched && fullNameInp.pristine">Invalid Name</small>
+                <small id="error-message" *ngIf="fullNameInp.invalid && fullNameInp.touched && fullNameInp.dirty">Your Real Name Bruhh</small>
+            </div> 
+        
+            <div class="cta-inp-child">
+                <div class="cta-child">
+                    <span class="material-symbols-rounded" id="cta-icon">
+                        smartphone
+                    </span>
+                    <input type="tel" id="phoneNumberInp" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="checkData.phoneNumber" #phoneNumberInp="ngModel" required autocomplete="tel">
+                </div>
+                <small id="error-message" *ngIf="phoneNumberInp.touched && phoneNumberInp.invalid ">Please enter your phone number</small>
+            </div>
+        
+            <div class="cta-inp-child">
+                <div class="cta-child">
+                    <span class="material-symbols-rounded" id="cta-icon">
+                        mail
+                    </span>
+                    <input type="email" email name="email" id="emailInp" class="inp-field" [(ngModel)]="checkData.email" #emailInp="ngModel" required autocomplete="email" placeholder="Email Address" inputmode="email">
+                </div>
+                <small id="error-message" *ngIf="emailInp.touched && emailInp.pristine">Invalid Email</small>
+                <small id="error-message" *ngIf="emailInp.touched && emailInp.dirty && emailInp.invalid">Invalid Email</small>
+            </div> 
+        
+            <div class="cta-inp-child"> <!-- New input for services offered -->
+                <div class="cta-child">
+                    <span class="material-symbols-rounded" id="cta-icon">
+                        design_services
+                    </span>
+                    <select id="servicesOffered" name="servicesOffered" [(ngModel)]="checkData.servicesOffered" #servicesOffered="ngModel" class="like-that">
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="service1">Marketing and Advertising</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <small id="error-message" *ngIf="servicesOffered.touched && servicesOffered.invalid && servicesOffered.pristine">Please select a service</small>
+            </div>
+        
             <button type="submit" class="def-btn cta-sub-btn" #submitBtn [disabled]="newsletter.invalid">Send</button>
-        </form> 
+        </form>
+        
         
         <div *ngIf="spinner" class="spinner"></div>
 
