@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LandingpageComponent implements OnInit {
 
   checkData = {
+    fullName:'',
+    phoneNumber: '',
     email: ''
   };
 
