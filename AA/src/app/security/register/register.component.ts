@@ -30,24 +30,29 @@ export class RegisterComponent implements OnInit {
     const conPasswordInp = document.querySelector("#conPasswordInp") as HTMLElement;
     const hiddenPasswordIcon = document.querySelector("#passwordHidden") as HTMLElement;
     const shownPasswordIcon = document.querySelector("#passwordShown") as HTMLElement;
+    const googleSS = document.querySelector("#google-ss") as HTMLElement;
+
+    googleSS.addEventListener("click", () => {
+      window.location.href = "/auth/google"
+    });
 
     hiddenPasswordIcon.addEventListener("click", () => {
       passwordInp.setAttribute("type","text");
       hiddenPasswordIcon.style.display ="none";
       shownPasswordIcon.style.display = "flex";
-    })
+    });
 
     shownPasswordIcon.addEventListener("click", () => {
       passwordInp.setAttribute("type","password");
       hiddenPasswordIcon.style.display ="flex";
       shownPasswordIcon.style.display = "none";
-    })
+    });
 
     conPasswordInp.addEventListener("click", () => {
       passwordInp.setAttribute("type","password");
       hiddenPasswordIcon.style.display ="flex";
       shownPasswordIcon.style.display = "none";
-    })
+    });
 
   }
 

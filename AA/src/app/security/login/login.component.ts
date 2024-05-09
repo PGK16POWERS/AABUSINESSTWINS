@@ -23,6 +23,11 @@ export class LoginComponent {
     const hiddenPasswordIcon = document.querySelector("#passwordHidden") as HTMLElement;
     const shownPasswordIcon = document.querySelector("#passwordShown") as HTMLElement;
     const subBtn = document.querySelector(".sub-btn") as HTMLElement;
+    const googleSS = document.querySelector("#google-ss") as HTMLElement;
+
+    googleSS.addEventListener("click", () => {
+      window.location.href = "/auth/google"
+    });
 
     hiddenPasswordIcon.addEventListener("click", () => {
       passwordInp.setAttribute("type","text");
