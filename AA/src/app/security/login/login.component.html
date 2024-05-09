@@ -6,8 +6,6 @@
             Welcome Back!
         </span>
 
-        <a href="/security" class="sub-para form-para">Back to security page</a>
-
         <form #loginForm="ngForm" (ngSubmit)="onSubmit()" action="/login" method="get" class="form" novalidate>
 
             <div class="form-parent">
@@ -37,7 +35,18 @@
             <button type="submit" class="def-btn sub-btn" [disabled]="loginForm.invalid">Login</button>
         </form>
 
-        <a href="/security/register" class="sub-para form-redirect-link">Go to Sign up page</a>
+        <span class="sub-para form-para">Or</span>
+
+        <div class="rd-party-parent">
+
+            <div class="div-child" id="google-opt">
+                <img src="assets/social-icons/google.svg" alt="" class="ss-icon">
+                <span class="ss-para">Continue with Google</span>
+            </div>
+
+        </div>
+
+        <a href="/security/register" class="sub-para form-redirect-link">Not a member?</a>
 
     </div>
 

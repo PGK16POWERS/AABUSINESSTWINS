@@ -586,9 +586,14 @@
                     <span class="material-symbols-rounded" id="cta-icon">
                         smartphone
                     </span>
-                    <input type="tel" id="phoneNumberInp" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="checkData.phoneNumber" #phoneNumberInp="ngModel" required autocomplete="tel">
+                    <input type="tel" id="phoneNumberInp" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="checkData.phoneNumber" #phoneNumberInp="ngModel" required pattern="[0-9]{10}" autocomplete="tel">
                 </div>
-                <small id="error-message" *ngIf="phoneNumberInp.touched && phoneNumberInp.invalid ">Please enter your phone number</small>
+                <small id="error-message" *ngIf="phoneNumberInp.touched && phoneNumberInp.invalid && phoneNumberInp.errors?.['required']">
+                    Please enter your phone number.
+                </small>
+                <small id="error-message" *ngIf="phoneNumberInp.touched && phoneNumberInp.invalid && phoneNumberInp.errors?.['pattern']">
+                    Please enter a valid 10-digit phone number.
+                </small>
             </div>
         
             <div class="cta-inp-child">
@@ -602,20 +607,22 @@
                 <small id="error-message" *ngIf="emailInp.touched && emailInp.dirty && emailInp.invalid">Invalid Email</small>
             </div> 
         
-            <div class="cta-inp-child"> <!-- New input for services offered -->
+            <div class="cta-inp-child">
                 <div class="cta-child">
                     <span class="material-symbols-rounded" id="cta-icon">
                         design_services
                     </span>
-                    <select id="servicesOffered" name="servicesOffered" [(ngModel)]="checkData.servicesOffered" #servicesOffered="ngModel" class="like-that">
-                        <option value="" disabled selected>Select Service</option>
+                    <select id="servicesOffered" name="servicesOffered" [(ngModel)]="checkData.servicesOffered" #servicesOffered="ngModel" required class="like-that">
+                        <option value="" disabled>Select Service</option>
                         <option value="service1">Marketing and Advertising</option>
                         <option value="service2">Supply Chain Services</option>
                         <option value="service3">Logistics</option>
                         <!-- Add more options as needed -->
                     </select>
                 </div>
-                <small id="error-message" *ngIf="servicesOffered.touched && servicesOffered.invalid && servicesOffered.pristine">Please select a service</small>
+                <small id="error-message" *ngIf="servicesOffered.invalid && servicesOffered.untouched">
+                    Please select a service
+                </small>
             </div>
         
             <button type="submit" class="def-btn cta-sub-btn" #submitBtn [disabled]="newsletter.invalid">Send</button>
@@ -624,11 +631,11 @@
         
         <div *ngIf="spinner" class="spinner"></div>
 
-        <span *ngIf="error" style="color: red;">
+        <span *ngIf="error" style="color: red; text-align: center;">
             Something went wrong please try again or come back later...
         </span>
 
-        <span *ngIf="confirm" style="color: rgb(3, 161, 3);">
+        <span *ngIf="confirm" style="color: rgb(3, 161, 3); text-align: center;">
             Successfully added to the mailling list 👍
         </span>
 

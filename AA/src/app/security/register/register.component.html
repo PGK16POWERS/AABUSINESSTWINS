@@ -6,8 +6,6 @@
             New Member
         </span>
 
-        <a href="/security" class="sub-para form-para">Back to security page</a>
-
         <form #signupForm="ngForm" (ngSubmit)="onSubmit()" action="/creatAcc" method="post" class="form" novalidate>
 
             <div class="form-parent">
@@ -18,7 +16,7 @@
                         <input type="text" [(ngModel)]="checkData.name" #nameInp="ngModel" pattern="[A-Za-z\s]+" name="name" id="nameInp" class="inp-field" required autocomplete="name" placeholder="name">
                     </div>
                     <small id="error-message" *ngIf="nameInp.touched && nameInp.pristine">Invalid Name</small>
-                    <small id="error-message" *ngIf="nameInp.invalid && nameInp.touched && nameInp.dirty">Your Real Name Bruhh</small>
+                    <small id="error-message" *ngIf="nameInp.invalid && nameInp.touched && nameInp.dirty">Please enter a valid name</small>
                 </div>              
 
                 <div class="sub-inp-child">
@@ -38,7 +36,7 @@
                         <img src="assets/form-icons/visibility.svg" class="form-icon" id="passwordShown">
                     </div>
                     <small id="error-message" *ngIf="passwordInp.touched && passwordInp.pristine">Create password</small>
-                    <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">guda Marjella</small>
+                    <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && !checkPasswordCriteria(checkData.password)">Your password does not meet minimum criteria</small>
                     <small id="error-message" *ngIf="passwordInp.valid && passwordInp.touched && passwordInp.dirty"> </small>
                 </div>
 
@@ -56,7 +54,18 @@
             <button type="submit" class="def-btn sub-btn" [disabled]="signupForm.invalid">Create Account</button>
         </form>
 
-        <a href="/security/login" class="sub-para form-redirect-link">Go to login page</a>
+        <span class="sub-para form-para">Or</span>
+
+        <div class="rd-party-parent">
+
+            <div class="div-child" id="google-opt">
+                <img src="assets/social-icons/google.svg" alt="" class="ss-icon">
+                <span class="ss-para">Continue with Google</span>
+            </div>
+
+        </div>
+
+        <a href="/security/login" class="sub-para form-redirect-link">Already a member?</a>
 
     </div>
 
