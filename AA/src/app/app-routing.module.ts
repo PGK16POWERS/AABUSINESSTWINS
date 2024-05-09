@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path:'security',
-    component: SecurityComponent,
+    component: RegisterComponent,
   },
   {
     path: 'security/login',

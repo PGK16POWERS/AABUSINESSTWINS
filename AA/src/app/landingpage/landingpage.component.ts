@@ -11,7 +11,7 @@ export class LandingpageComponent implements OnInit {
     fullName:'',
     phoneNumber: '',
     email: '',
-    servicesOffered:''
+    servicesOffered:'',
   };
 
   showForm: boolean = true;
@@ -24,19 +24,19 @@ export class LandingpageComponent implements OnInit {
     this.showForm = false;
     this.spinner = true;
 
-    console.log("User Data: " + this.checkData.email);
+    console.log("User Data: " + JSON.stringify(this.checkData));
 
     fetch('/newsletter-signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email: this.checkData.email })
+      body: JSON.stringify(this.checkData)
     })
     .then(response => response.json())
     .then(data => {
       // Handle the response data if needed
-      console.log('Email sent successfully:', data);
+      console.log('User Details sent successfully:', data);
 
       this.confirm = true;
 
@@ -51,7 +51,7 @@ export class LandingpageComponent implements OnInit {
 
     })
     .catch(error => {
-      console.error('Error sending email:', error);
+      console.error('Error sending user details:', error);
 
       this.error = true;
 
