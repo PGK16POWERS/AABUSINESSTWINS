@@ -737,6 +737,7 @@ iframe {
     border-radius: 5px;
     width: 100%;
     height: 60px;
+    font-weight: 400;
 }
 
 #call-to-action-one .sect-modal {
@@ -785,6 +786,12 @@ iframe {
 .cta-sub-btn:disabled {
     background-color: #04233968;
 }
+
+.def-btn[disabled] {
+    background-color: #04233940; /* Change the background color */
+    color: #82aac768; /* Change the text color */
+    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+  }
 
 /* CALL TO ACTION */
 
@@ -871,11 +878,11 @@ footer .footer-modal {
 }
 
 .center-parent-div {
-    width:450px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .sub-para {
@@ -949,7 +956,7 @@ footer .footer-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .form-parent {
@@ -957,7 +964,7 @@ footer .footer-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 
 .sub-inp-child, .inp-child {
@@ -1409,7 +1416,6 @@ footer .footer-modal {
     #main-security-frame {
         justify-content: flex-start;
         align-items: center;
-        
     }
 
    
