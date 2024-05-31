@@ -37,16 +37,31 @@ body {
     border-radius: 5px;
 }
 
+.section-header-div {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.section-header {
+    font-size: 1.8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
 /* MAIN LANDING PAGE */
 
 #hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     background-image: url(assets/bg.jpg);
     background-size: cover;
+    border: 0 solid transparent;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 header {
@@ -64,5 +79,159 @@ header .header-btn {
     letter-spacing: 1px;
 }
 
+#hero {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.img-div, .content-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-header, .hero-sub-header, .btn-div {
+    width: 450px;
+}
+.hero-header {
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-sub-header {
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.heros {
+    position: absolute;
+    width: 120%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-div .white-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
 
 /* MAIN LANDING PAGE */
+
+
+
+
+
+
+/* SERVICE SECTION */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
+    padding: 2rem;
+    gap: 2.5rem;
+}
+
+.service-parent {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-child {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 330px;
+    gap: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.child-logo {
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.service-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-link {
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.service-child:hover {
+    border: 2px solid black;
+    transform: translate(-5px, -5px) scale(1.05);
+}
+
+/* SERVICE SECTION */
+
+
+
+
+
+/* CONTACT SECTION */
+
+#contact-section {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2.5rem;
+}
+
+
+
+
+
+
+
+/* CONTACT SECTION */
