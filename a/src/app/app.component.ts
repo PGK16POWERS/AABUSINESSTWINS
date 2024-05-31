@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const serviceChildren = document.querySelectorAll(".service-child") as NodeListOf<HTMLElement>;
+    const heroHeader = document.querySelector(".hero-header-small") as HTMLElement;
+    let sentenceIndex = 0;
+    let charIndex = 0;
 
     serviceChildren.forEach(child => {
 
@@ -18,17 +21,63 @@ export class AppComponent implements OnInit {
       const hideLink = child.querySelector(".hide-link") as HTMLElement;
 
       viewDetailLink.addEventListener("click", () => {
-        detailParent.style.display = "flex";
+        const serviceChildren = document.querySelectorAll(".service-child") as NodeListOf<HTMLElement>;
+
+        serviceChildren.forEach(kid => {
+          kid.style.display = "none";
+          child.style.display = "flex";
+        });
+
         child.style.width = "100%";
-        viewDetailLink.style.display = "none";
+        child.style.height = "100%";
+
+        detailParent.style.display = "flex";
+
+        viewDetailLink.style.display = "none"
       });
 
       hideLink.addEventListener("click", () => {
-        detailParent.style.display = "none";
+        const serviceChildren = document.querySelectorAll(".service-child") as NodeListOf<HTMLElement>;
+
+        serviceChildren.forEach(kid => {
+          kid.style.display = "flex";
+        });
+
         child.style.width = "";
-        viewDetailLink.style.display = "flex";
+        child.style.height = "";
+
+        detailParent.style.display = "none";
+
+        viewDetailLink.style.display = "flex"
       });
 
     });
+
+    const sentences = [
+      "Welcome to our website!",
+      "Experience the best services with us.",
+      "Contact us for more information.",
+      "Stay tuned for updates."
+  ];
+
+    function typeWriter() {
+      if (charIndex < sentences[sentenceIndex].length) {
+          heroHeader.innerHTML += sentences[sentenceIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 100);
+      } else {
+          setTimeout(() => {
+              charIndex = 0;
+              sentenceIndex = (sentenceIndex + 1) % sentences.length;
+              heroHeader.innerHTML = "";
+              typeWriter();
+          }, 2000);
+      }
+  }
+
+  // Clear the initial text and start the typewriter effect
+  heroHeader.innerHTML = "";
+  typeWriter();
+
   }
 }
