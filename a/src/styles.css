@@ -146,7 +146,7 @@ header .header-btn {
     gap: 1.5rem;
 }
 
-.hero-header, .hero-sub-header, .btn-div {
+.hero-header, .hero-sub-header, .btn-div, .hero-header-small {
     width: 450px;
 }
 .hero-header {
@@ -176,6 +176,24 @@ header .header-btn {
     margin-top: 1rem;
 }
 
+.hero-header-small {
+    display: inline-block;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1em;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
 /* MAIN LANDING PAGE */
 
 
@@ -202,6 +220,7 @@ header .header-btn {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
+    position: relative;
 }
 
 .service-child {
@@ -212,10 +231,12 @@ header .header-btn {
     justify-content: space-around;
     width: 350px;
     gap: 1.5rem;
-    transition: all cubic-bezier(0.39, 0.575, 0.565, 1)s ease-in-out;
+    transition: all .3s ease-in-out;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
+    background: #fff;
+    z-index: 1;
 }
 
 .child-logo {
@@ -249,7 +270,7 @@ header .header-btn {
 
 .service-child:hover {
     border: 2px solid black;
-    transform: translate(-5px, -5px) scale(1.05);
+    transform: translate(-2px, -2px);
 }
 
 .details-div {
@@ -257,6 +278,9 @@ header .header-btn {
     flex-direction: column;
     align-items: flex-start;
     gap: .9rem;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
 }
 
 .desc {
@@ -264,7 +288,6 @@ header .header-btn {
     font-weight: 300;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 600px;
 }
 
 .details-div .black-btn {
