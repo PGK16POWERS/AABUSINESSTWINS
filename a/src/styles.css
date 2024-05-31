@@ -49,6 +49,48 @@ body {
     letter-spacing: 1px;
 }
 
+/* COMMON STYLES */
+
+.text-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.div-header-small {
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.div-header-large {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    font-weight: 500;
+    max-width: 500px;
+    text-align: left;
+}
+
+.main-header {
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    max-width: 650px;
+}
+
+.sub-header {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* COMMON STYLES */
+
 /* MAIN LANDING PAGE */
 
 #hero-section {
@@ -168,9 +210,9 @@ header .header-btn {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    width: 330px;
+    width: 350px;
     gap: 1.5rem;
-    transition: all 0.3s ease-in-out;
+    transition: all cubic-bezier(0.39, 0.575, 0.565, 1)s ease-in-out;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -210,6 +252,33 @@ header .header-btn {
     transform: translate(-5px, -5px) scale(1.05);
 }
 
+.details-div {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+}
+
+.desc {
+    font-size: .9em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.details-div .black-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    background-color: #000000;
+    color: white;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    font-family: var(--nuns);
+}
+
 /* SERVICE SECTION */
 
 
@@ -226,12 +295,176 @@ header .header-btn {
     align-items: center;
     padding: 2rem;
     gap: 2.5rem;
+    border: 0 solid transparent;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
+.content-div-contact {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+}
 
+.img-div, .content {
+    width: 100%;
+    height: 100%;
+}
 
+.img-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.contact-vec {
+    width: 350px;
+}
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
 
+.contact-parent {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
+.icon {
+    width: 40px;
+}
+
+.rect-card {
+    height: 100%;
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 140px auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    "a b";
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 0 solid transparent;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #000000;
+}
+
+.rect-card .inner-left {
+    height: 100%;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rect-card .inner-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.inner-header {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.inner-sub-header {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
 /* CONTACT SECTION */
+
+
+
+
+/* FOOTER STYLS */
+
+footer {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.redi-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.link {
+    width: 20px;
+    height: 20px;
+}
+
+/* FOOTER STYLS */
+
+
+@media (max-width: 1000px) {
+    /* COMMON STYLES */
+
+    .text-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .4rem;
+    }
+
+    .div-header-small {
+        font-size: .8em;
+        letter-spacing: 1px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .div-header-large {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+        font-weight: 500;
+        max-width: 300px;
+        text-align: left;
+    }
+
+    .main-header {
+        font-size: 1.4em;
+        font-weight: 500;
+        letter-spacing: 1px;
+        max-width: 400px;
+    }
+
+    .sub-header {
+        font-size: .8em;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 350px;
+        text-align: left;
+    }
+
+    /* COMMON STYLES */
+
+}
