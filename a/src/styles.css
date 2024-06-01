@@ -102,8 +102,8 @@ body {
     background-image: url(assets/bg.jpg);
     background-size: cover;
     border: 0 solid transparent;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 header {
@@ -163,7 +163,7 @@ header .header-btn {
 
 .heros {
     position: absolute;
-    width: 120%;
+    width: 100%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
