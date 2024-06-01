@@ -124,6 +124,7 @@ header .header-btn {
 
 #hero {
     height: 100%;
+    width: 100%;
     color: white;
     display: flex;
     align-items: flex-start;
@@ -502,7 +503,7 @@ footer {
 
     #hero-section {
         height: 100%;
-        min-height: 85vh;
+        min-height: 75vh;
         width: 100%;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
