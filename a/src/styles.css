@@ -448,6 +448,7 @@ footer {
 
 
 @media (max-width: 1000px) {
+
     /* COMMON STYLES */
 
     .text-div {
@@ -487,7 +488,206 @@ footer {
         max-width: 350px;
         text-align: left;
     }
+    
+    .section-header {
+        font-size: 1.5em;
+        font-weight: 700;
+        font-family: var(--nuns);
+    }
 
     /* COMMON STYLES */
+
+    /* MAIN LANDING PAGE */
+
+    #hero-section {
+        height: 100%;
+        min-height: 85vh;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .brand-logo {
+        width: 40px;
+    }
+
+    header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    header .header-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    #hero {
+        height: 100%;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
+        justify-content: center;
+    }
+
+    .img-div, .content-div {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.5rem;
+    }
+
+    .content-div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-header, .hero-sub-header, .btn-div, .hero-header-small {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero-header {
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .hero-sub-header {
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        max-width: 390px;
+    }
+
+    .img-div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        height: 100%;
+    }
+
+    .heros {
+        width: 500px;
+    }
+
+    .btn-div .white-btn {
+        padding: 10px 23px;
+    }
+
+    /* MAIN LANDING PAGE */
+
+    /* SERVICE SECTION */
+
+    #services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-height: 60vh;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .service-parent {
+        gap: 1rem;
+    }
+
+    .service-child {
+        padding: 1.5rem;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .child-logo {
+        font-size: 1.8em;
+        width: 50px;
+        height: 50px;
+    }
+
+    .service-name {
+        font-size: 1.1em;
+    }
+
+    .service-link {
+        font-size: .9em;
+    }
+
+    .service-child:hover {
+        transform: translate(0, 0);
+    }
+
+    /* SERVICE SECTION */
+
+    /* CONTACT SECTION */
+
+    #contact-section {
+        padding: 2rem 1rem;
+        gap: 2.5rem;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .content-div-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .img-div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-vec {
+        width: 300px;
+    }
+
+    .contact-parent {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .icon {
+        width: 40px;
+    }
+
+    #contact-section .content .text-div .div-header-large {
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        font-weight: 500;
+        max-width: 400px;
+        text-align: left;
+    }
+
+    #contact-section .content .text-div .sub-header {
+        margin-top: .9rem;
+        font-size: .9em;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 1px;
+        max-width: 450px;
+        text-align: left;
+    }
+
+    /* CONTACT SECTION */
+
+    /* FOOTER STYLS */
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    /* FOOTER STYLS */
 
 }
