@@ -104,6 +104,7 @@ body {
     border: 0 solid transparent;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    overflow-x: hidden;
 }
 
 header {
@@ -122,7 +123,6 @@ header .header-btn {
 }
 
 #hero {
-    width: 100%;
     height: 100%;
     color: white;
     display: flex;
@@ -321,6 +321,7 @@ header .header-btn {
     border: 0 solid transparent;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    width: 100%;
 }
 
 .content-div-contact {
@@ -502,6 +503,7 @@ footer {
     #hero-section {
         height: 100%;
         min-height: 85vh;
+        width: 100%;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
     }
@@ -541,6 +543,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        z-index: 16;
     }
 
     .hero-header, .hero-sub-header, .btn-div, .hero-header-small {
@@ -570,7 +573,7 @@ footer {
     }
 
     .heros {
-        width: 500px;
+        width: 440px;
     }
 
     .btn-div .white-btn {
@@ -624,7 +627,7 @@ footer {
     /* CONTACT SECTION */
 
     #contact-section {
-        padding: 2rem 1rem;
+        padding: 2rem .5rem;
         gap: 2.5rem;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
@@ -647,7 +650,7 @@ footer {
     }
 
     .contact-vec {
-        width: 300px;
+        width: 80%;
     }
 
     .contact-parent {
@@ -655,6 +658,7 @@ footer {
         justify-content: flex-start;
         width: 100%;
         flex-wrap: wrap;
+        padding: 0;
         gap: 1rem;
     }
 
@@ -662,11 +666,16 @@ footer {
         width: 40px;
     }
 
+    .rect-card {
+        grid-template-columns: 50px 1fr;
+        padding: 1rem;
+    }
+
     #contact-section .content .text-div .div-header-large {
         font-size: 1.5em;
         letter-spacing: 1px;
         font-weight: 500;
-        max-width: 400px;
+        max-width: 100%;
         text-align: left;
     }
 
@@ -676,7 +685,7 @@ footer {
         font-weight: 300;
         line-height: 25px;
         letter-spacing: 1px;
-        max-width: 450px;
+        max-width: 100%;
         text-align: left;
     }
 
