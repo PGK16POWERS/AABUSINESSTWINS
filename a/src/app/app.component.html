@@ -3,7 +3,7 @@
 
   <header>
     <img src="assets/whitelogovec.svg" alt="AA logo" class="brand-logo">
-    <button type="button" class="white-btn header-btn">Contact us</button>
+    <button type="button" class="white-btn header-btn contact-btn">Contact us</button>
   </header>
 
   <div id="hero">
@@ -23,14 +23,14 @@
       </span>
 
       <div class="btn-div">
-        <button type="button" class="white-btn">Contact us</button>
+        <button type="button" class="white-btn contact-btn">Contact us</button>
       </div>
       
 
     </div>
 
     <div class="img-div">
-      <img src="assets/aa_twins.png" alt="" class="heros" loading="eager">
+      <img [src]="images[currentImageIndex]" alt="Slideshow image" class="heros" loading="eager">
     </div>
 
   </div>
@@ -46,7 +46,6 @@
   </div>
 
   <div class="service-parent">
-
     
     <div class="service-child">
 
@@ -93,7 +92,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span href="#" class="hide-link">Hide</span>
 
@@ -146,7 +145,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span href="#" class="hide-link">Hide</span>
 
@@ -196,7 +195,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span href="#" class="hide-link">Hide</span>
 
@@ -246,7 +245,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span href="#" class="hide-link">Hide</span>
 
@@ -296,7 +295,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span class="hide-link">Hide</span>
 
@@ -346,7 +345,7 @@
           contact us for more details on the above or other related services. 
         </span>
 
-        <button type="button" class="black-btn ">Contact us</button>
+        <button type="button" class="black-btn contact-btn">Contact us</button>
 
         <span class="hide-link">Hide</span>
 
@@ -387,7 +386,7 @@
 
       <div class="contact-parent">
 
-        <div class="rect-card">
+        <div class="rect-card" id="email-div">
 
           <div class="inner-left email-redirect">
               <img src="/assets/icons/email-icon.svg" class="icon">
@@ -396,13 +395,13 @@
           <div class="inner-right">
               <span class="inner-header">Email us</span>
               <span class="inner-sub-header">
-                  AABusinessTwins&#64;gmail.com
+                amogelangmangoale215&#64;gmail.com
               </span>
           </div>
 
         </div>
 
-        <div class="rect-card">
+        <div class="rect-card" id="call-div">
 
           <div class="inner-left call-redirect">
               <img src="/assets/icons/call.svg" class="icon">
@@ -430,18 +429,20 @@
   <img src="assets/blacklogovec.svg" alt="AA logo" class="brand-logo">
 
   <span class="inner-sub-header">
-    AABusinessTwins&#64;gmail.com
+    <a href="mailto:amogelangmangoale215@gmail.com" style="color: black;">amogelangmangoale215&#64;gmail.com</a>
   </span>
 
   <span class="inner-sub-header">
-    +27 071 488 2177
+    <a href="tel:+270714882177" style="color: black;">+27 071 488 2177</a>
   </span>
 
   <div class="redi-links">
-    <img src="assets/igvec.svg" class="link">
-    <img src="assets/facebookvec.svg" class="link">
-    <img src="assets/whatsappvec.svg" class="link">
-    <img src="assets/twittervec.svg" class="link">
+    
+    <a href="https://www.instagram.com/aa_businesstwins/"><img src="assets/igvec.svg" class="link"></a>
+    <a href="https://www.facebook.com/profile.php?id=100063815220323&mibextid=JRoKGi"><img src="assets/facebookvec.svg" class="link"></a>
+    <a href="https://wa.me/0714882177"><img src="assets/whatsappvec.svg" class="link"></a>
+    <a href="https://x.com/TheBusinestwins?t=lxPmvrAufy8ZVwsVWfR8CQ&s=08"><img src="assets/twittervec.svg" class="link"></a>
+
   </div>
 
   <span class="inner-sub-header">
