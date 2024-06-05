@@ -99,7 +99,7 @@ body {
     align-items: center;
     height: 90vh;
     width: 100%;
-    background-image: url(assets/bg.jpg);
+    background-image: url(assets/newtouches/trpmmvid2.gif);
     background-size: cover;
     border: 0 solid transparent;
     border-bottom-left-radius: 50px;
@@ -236,7 +236,7 @@ header .header-btn {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
-    background: #fff;
+    background-size: cover;
     z-index: 1;
 }
 
@@ -281,7 +281,6 @@ header .header-btn {
     gap: .9rem;
     width: 100%;
     max-width: 600px;
-    background: #fff;
 }
 
 .desc {
